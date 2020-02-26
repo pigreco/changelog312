@@ -1,6 +1,6 @@
 # Changelog 3.12 București
 
-The following changelogs are the result of this filter:
+The following changelogs are the result of this [filter](https://github.com/qgis/QGIS/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Aclosed+label%3Afeature+merged%3A2019-10-25T00%3A00%3A00Z..2020-02-21T00%3A00%3A00Z):
 
 ```
 is:pr is:closed label:feature merged:2019-10-25T00:00:00Z..2020-02-21T00:00:00Z
