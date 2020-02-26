@@ -151,16 +151,33 @@ inherit this default settings. The Project Properties dialog also has a new sett
 - **merged**:	2020-01-13T00:24:26Z
 - **tags**:	Changelog;Data Provider;Feature
 - **PR**:	[33629](https://github.com/qgis/QGIS/pull/33629)
+- **Descrizione**:  This PR adds edition support for Oracle following geometry type:
+
+      * CircularString(Z)
+      * CompoundCurve(Z)
+      * MultiCurve(Z)
+      * CurvePolygon(Z)
+      * MultiSurface(Z)
+
+
 ##	New parameter type for map themes
 - **author**:	[nyalldawson](https://twitter.com/nyalldawson)
 - **merged**:	2020-01-05T10:50:06Z
 - **tags**:	Feature;Processing
 - **PR**:	[33608](https://github.com/qgis/QGIS/pull/33608)
+- **Descrizione**:  Fixes an api break in the rasterize algorithm, and then adds a proper dedicated parameter type for map theme selection
+
+![](./imgs/33608.png)
+
 ##	Rotate expression function (with followups)
-- **author**:	[nyalldawson](https://twitter.com/nyalldawson)
+- **author**:	[nyalldawson](https://twitter.com/nyalldawson) [raymondnijssen](https://github.com/raymondnijssen)
 - **merged**:	2020-01-02T04:45:07Z
 - **tags**:	Changelog;Feature
 - **PR**:	[33575](https://github.com/qgis/QGIS/pull/33575)
+- **Descrizione**:  rotate() expression function [#33125](https://github.com/qgis/QGIS/pull/33125)
+
+![](https://github.com/gbvitrano/HfcQGIS/blob/master/img/novita_312/Image03.png)
+
 ##	Add native affine transform algorithm for vectors
 - **author**:	[nyalldawson](https://twitter.com/nyalldawson)
 - **merged**:	2019-12-31T05:01:36Z
