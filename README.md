@@ -183,49 +183,99 @@ inherit this default settings. The Project Properties dialog also has a new sett
 - **merged**:	2019-12-31T05:01:36Z
 - **tags**:	Changelog;Feature;Processing
 - **PR**:	[33552](https://github.com/qgis/QGIS/pull/33552)
+- **Descrizxione**: Offers the following benefits over the GRASS/SAGA versions:
+
+  * Full support for z/m values and handling curved geometries without loss
+  * of curves
+  * Works with all native data types, no need for format transformation
+  * Supports dynamic (data defined, per feature) translate/scale/rotate parameters
+  * Allows transformation and scaling of both Z and M values (if present)
+  * Supports in-place edit mode
+* Fixes [#33550](https://github.com/qgis/QGIS/issues/33550)
+
+![](./imgs/33552.png)
+
 ##	Allow dropping a map layer from the layer tree onto a projection selection widget
 - **author**:	[nyalldawson](https://twitter.com/nyalldawson)
 - **merged**:	2019-12-22T19:17:41Z
 - **tags**:	Changelog;Feature;GUI/UX
 - **PR**:	[33485](https://github.com/qgis/QGIS/pull/33485)
+- **Descrizione**:  ...to set the projection to match that layer. Just a little timesaving shortcut!
+
+![](https://user-images.githubusercontent.com/1829991/71222288-b7070080-231b-11ea-89f4-af856dece4c3.gif)
+
 ##	Load 3D vector layer data in background + tiling
 - **author**:	[wonder-sk](https://github.com/wonder-sk)
 - **milestone**:	3.12.0
 - **merged**:	2020-01-16T23:00:34Z
 - **tags**:	3D;Changelog;Feature
 - **PR**:	[33480](https://github.com/qgis/QGIS/pull/33480)
+- **Descrizione**:  This adds support for background loading of data from vector layers into 3D map views. Until now, loading (and tessellation) would freeze the GUI completely - this could take many seconds depending on the complexity of input data.
+- **Sponsored by** QGIS.org grant.
+
 ##	Stored expressions
 - **author**:	[elpaso](https://twitter.com/elpaso66)
 - **milestone**:	3.12.0
 - **merged**:	2019-12-17T19:13:33Z
 - **tags**:	Expressions;Feature
 - **PR**:	[33437](https://github.com/qgis/QGIS/pull/33437)
+- **Descrizione**:  Store user expressions (with context/category, just like recent expressions);Clear editor icon/action
+- **Sponsored by** [Salvatore Fiandaca (aka Pigreco)](https://pigrecoinfinito.com/2019/12/15/shortest-ever-crowdfunding/), This PR implements part of QEP [qgis/QGIS-Enhancement-Proposals#135](https://github.com/qgis/QGIS-Enhancement-Proposals/issues/135)
+
+![](https://user-images.githubusercontent.com/142164/70983414-faae0000-20b8-11ea-9f25-14b338d4c680.gif)
+
 ##	List referenced layer values in Expression Builder
 - **author**:	signedav
 - **merged**:	2019-12-20T16:29:11Z
 - **PR**:	[33436](https://github.com/qgis/QGIS/pull/33436)
+- **Descrizione**:  When a field is a RelationReference, ValueRelation and ValueMap, there is the possibility not only to show the values of the current layer but also the possible values in the referenced layer / configured possiblities. age is a ValueMap, species is a ValueRelation and island_id is a RelationReference
+
+![](https://user-images.githubusercontent.com/28384354/70978774-ab63d180-20b0-11ea-901b-d51d44fa8fa4.gif)
+
 ##	Other average methods 3d mesh
 - **author**:	PeterPetrik
 - **milestone**:	3.12.0
 - **merged**:	2019-12-20T06:48:40Z
 - **tags**:	Feature;Mesh;Needs Documentation
 - **PR**:	[33426](https://github.com/qgis/QGIS/pull/33426)
+- **Descrizione**:   add all remaining method based on [qgis/QGIS-Enhancement-Proposals#158](https://github.com/qgis/QGIS-Enhancement-Proposals/issues/158), for methods description see <https://fvwiki.tuflow.com/index.php?title=Depth_Averaging_Results>
+
+![](https://user-images.githubusercontent.com/804608/71175509-068bf480-2268-11ea-9d60-adad896912e2.png)
+
 ##	Fixes time reference for mesh layer #32186 #33399 #31933
 - **author**:	vcloarec
 - **milestone**:	3.12.0
 - **merged**:	2019-12-17T13:56:50Z
 - **tags**:	Bug;Data Provider;Feature;Mesh
 - **PR**:	[33410](https://github.com/qgis/QGIS/pull/33410)
+- **Descrizione**:  fixes [#32186](https://github.com/qgis/QGIS/issues/32186) [#33399](https://github.com/qgis/QGIS/issues/33399) [#31933](https://github.com/qgis/QGIS/issues/31933)
+since [`6e2ef15`](https://github.com/qgis/QGIS/commit/6e2ef1544f14c7a5f700447825780f5d93c3c927), MDAL provide time reference for dataset.
+This PR allows QGis to read this time reference for mesh layer
+If there is a valid time reference provided with dataset groups, this time reference is used to displaying time (using absolute time).
+If there is no reference time provided, the time is displayed using relative time, and a time reference can be set by the user to display absolute time.
+When no time reference is provided, default one is current date + time set with 00:00:00.
+A push button is added to reload the reference time provided with dataset groups, if needed.Also adds a new feature to let the user set the time unit of the provider with a combo box if thise time unit is different than hours.
+
+![](https://user-images.githubusercontent.com/7416892/70955568-bb939680-2047-11ea-9857-8aba122e43dd.png)
+
 ##	Add expressions is_empty(geom)  is_empty_or_null(geom)
-- **author**:	lbartoletti
+- **author**:	[lbartoletti](https://twitter.com/lo_bartoletti)
 - **merged**:	2019-12-16T07:06:59Z
 - **PR**:	[33333](https://github.com/qgis/QGIS/pull/33333)
+- **Descrizione**:  Following my work on empty geometries, here is a new expression to catch them.
+
+![](https://github.com/gbvitrano/HfcQGIS/blob/master/img/geometria/is_empty/is_empty1.png)
+
 ##	Support datasets with data defined on faces in mesh calculator
 - **author**:	PeterPetrik
 - **milestone**:	3.12.0
 - **merged**:	2019-12-06T17:27:29Z
 - **tags**:	Feature;Mesh
 - **PR**:	[33248](https://github.com/qgis/QGIS/pull/33248)
+- **Descrizione**:  fix [#30219](https://github.com/qgis/QGIS/issues/30219) fix [#30170](https://github.com/qgis/QGIS/issues/30170) added "driver" and "group name" to the calculator interface. MDAL now supports 3 drivers for storing results, so user must be able to choose appropriate driver and dataset group name (some drivers store multiple groups to 1 file)
+
+![](https://user-images.githubusercontent.com/804608/70247995-931fb880-177a-11ea-9b4d-83bfc4fa92ad.png)
+
 ##	Show the total pan distance and bearing in the status bar
 - **author**:	[nyalldawson](https://twitter.com/nyalldawson)
 - **merged**:	2019-12-05T18:50:19Z
@@ -424,7 +474,7 @@ inherit this default settings. The Project Properties dialog also has a new sett
 - **tags**:	Feature;Merge After Thaw
 - **PR**:	[31728](https://github.com/qgis/QGIS/pull/31728)
 ##	Hash expressions
-- **author**:	lbartoletti
+- **author**:	[lbartoletti](https://twitter.com/lo_bartoletti)
 - **merged**:	2019-10-25T22:32:27Z
 - **tags**:	Feature;Merge After Thaw
 - **PR**:	[31726](https://github.com/qgis/QGIS/pull/31726)
