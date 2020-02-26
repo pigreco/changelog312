@@ -516,7 +516,7 @@ Output fuzzified layer showcasing location suitability for a certain kind of cro
 - **Description**:  Adds geom_from_wkb and geom_to_wkb, which mirror the existing geom_from_wkt/geom_to_wkt functions but for WKB representations of geometries. 
 Since QGIS 3.6 we've had good support for binary blob values in expressions and field values, so adding these functions allows users to work with binary blob fields containing WKB representations of geometries (e.g. with a geometry generator showing the encoded geometries)
 
-|[](https://github.com/gbvitrano/HfcQGIS/blob/master/img/geometria/geom_from_wkb/geom_from_wkb1.png)
+![](https://github.com/gbvitrano/HfcQGIS/blob/master/img/geometria/geom_from_wkb/geom_from_wkb1.png)
 
 ##	Add - **merged**:_from_epoch (MSec from epoch) expression function
 - **author**:	rduivenvoorde
