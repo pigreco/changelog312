@@ -98,7 +98,7 @@ If there are the same fields in the destination layer, then the attributes for t
 - **Sponsored by** Christmas Holidays Inc.
 
 ##	Allow customization of the items shown in browser
-- **author**:	PeterPetrik
+- **author**:	[PeterPetrik](https://github.com/PeterPetrik)
 - **milestone**:	3.12.0
 - **merged**:	2020-01-15T09:08:59Z
 - **PR**:	[33679](https://github.com/qgis/QGIS/pull/33679)
@@ -233,7 +233,7 @@ inherit this default settings. The Project Properties dialog also has a new sett
 ![](https://user-images.githubusercontent.com/28384354/70978774-ab63d180-20b0-11ea-901b-d51d44fa8fa4.gif)
 
 ##	Other average methods 3d mesh
-- **author**:	PeterPetrik
+- **author**:	[PeterPetrik](https://github.com/PeterPetrik)
 - **milestone**:	3.12.0
 - **merged**:	2019-12-20T06:48:40Z
 - **tags**:	Feature;Mesh;Needs Documentation
@@ -267,7 +267,7 @@ A push button is added to reload the reference time provided with dataset groups
 ![](https://github.com/gbvitrano/HfcQGIS/blob/master/img/geometria/is_empty/is_empty1.png)
 
 ##	Support datasets with data defined on faces in mesh calculator
-- **author**:	PeterPetrik
+- **author**:	[PeterPetrik](https://github.com/PeterPetrik)
 - **milestone**:	3.12.0
 - **merged**:	2019-12-06T17:27:29Z
 - **tags**:	Feature;Mesh
@@ -280,131 +280,252 @@ A push button is added to reload the reference time provided with dataset groups
 - **author**:	[nyalldawson](https://twitter.com/nyalldawson)
 - **merged**:	2019-12-05T18:50:19Z
 - **PR**:	[33241](https://github.com/qgis/QGIS/pull/33241)
+- **Descrizione**: ...during canvas pan operations. Allows users to know exactly how far (and in what direction) they've dragged the map.
+
+![](./imgs/pan_bar_status.gif)
+
 ##	Add option to auto-rotate canvas to GPS bearing; show GPS bearing as a line over map
 - **author**:	[nyalldawson](https://twitter.com/nyalldawson)
 - **merged**:	2019-12-10T03:05:06Z
 - **tags**:	Feature;GPS
 - **PR**:	[33240](https://github.com/qgis/QGIS/pull/33240)
+- **Descrizione**:  
+  * _**Add option to auto-rotate canvas to GPS bearing**_: When enabled, the map canvas will automatically rotate so that it's oriented in the same direction as the GPS bearing;
+  * _**Show GPS bearing as a line over map**_: Allow showings a bearing line from the GPS location pointed in the GPS's direction. Allows users to view a "current path" directional line as they navigate using a GPS
+
 ##	Show html files in browser panel
 - **author**:	[nyalldawson](https://twitter.com/nyalldawson)
 - **merged**:	2019-12-06T04:39:10Z
 - **PR**:	[33219](https://github.com/qgis/QGIS/pull/33219)
+- **Descrizione**:  Allows .htm(l) files to be shown and opened from the browser panel. These are often used to document data files or mapping projects.
+
+![](./imgs/33219.png)
+
 ##	New algorithm "Repair Shapefile"
 - **author**:	[nyalldawson](https://twitter.com/nyalldawson)
 - **merged**:	2019-12-04T09:58:03Z
 - **tags**:	Feature;Processing
 - **PR**:	[33218](https://github.com/qgis/QGIS/pull/33218)
+- **Descrizione**:  Uses GDAL to repair shapefiles which have a broken or missing .SHX file.
+
+![](./imgs/33218.png)
+
 ##	Static particle traces for rendering mesh vector dataset
 - **author**:	vcloarec
 - **milestone**:	3.12.0
 - **merged**:	2019-12-03T07:13:37Z
 - **tags**:	Feature;Mesh
 - **PR**:	[33165](https://github.com/qgis/QGIS/pull/33165)
+- **Descrizione**:  This PR permits to display directly in QGIS static particle traces for vector datasets in mesh layer without any plugin.
+The user can choose in the mesh layer properties window :
+  * the color
+  * the size of the traces (line width)
+  * the count of particles
+  * the maximum length of the particle's tail
+
+![](https://user-images.githubusercontent.com/7416892/69893325-29b92900-12e6-11ea-98bf-7488d49d7eb8.png)
+
 ##	Stacked 3d mesh (part 1.)
-- **author**:	PeterPetrik
+- **author**:	[PeterPetrik](https://github.com/PeterPetrik)
 - **milestone**:	3.12.0
 - **merged**:	2019-12-05T06:08:52Z
 - **tags**:	Data Provider;Feature;Mesh;Squash!
 - **PR**:	[33153](https://github.com/qgis/QGIS/pull/33153)
+- **Descrizione**:  initial implementation of QEP 158, please see QEP for description; [qgis/QGIS-Enhancement-Proposals#158](https://github.com/qgis/QGIS-Enhancement-Proposals/issues/158)
+
+![](https://user-images.githubusercontent.com/804608/70130218-70a97480-1680-11ea-9071-f3a1e2400af1.png)
+
 ##	Show "Open Document..." action when right clicking certain
 - **author**:	[nyalldawson](https://twitter.com/nyalldawson)
 - **merged**:	2019-12-04T06:50:53Z
 - **PR**:	[33142](https://github.com/qgis/QGIS/pull/33142)
+- **Descrizione**:  files in the browser, allowing them to be opened with the default application for that file type; E.g. PDFs will open with the default PDF viewer.
+Works with PDF, ODS, XLS(X), CSV, TXT, PNG, JPEG, TIFF, SVG (other types will likely need more work, since they aren't currently shown in the browser)
+
+![](https://user-images.githubusercontent.com/1829991/69840503-8a754100-12a7-11ea-9b5d-6aecdcab7829.gif)
+
 ##	Allow drag and drop of pictures onto layouts
 - **author**:	[nyalldawson](https://twitter.com/nyalldawson)
 - **merged**:	2019-11-28T08:38:32Z
 - **tags**:	Feature;Print Layouts
 - **PR**:	[33113](https://github.com/qgis/QGIS/pull/33113)
+- **Descrizione**:  E.g. drag an svg from a file explorer onto the layout to create a new picture item containing that svg image.
+
+![](https://user-images.githubusercontent.com/1829991/69777105-7b7c8900-11ea-11ea-9f89-6fc09d98c986.gif)
+
 ##	Paint effect support for diagram renderer
 - **author**:	[nyalldawson](https://twitter.com/nyalldawson)
 - **merged**:	2019-11-24T20:20:44Z
 - **PR**:	[33044](https://github.com/qgis/QGIS/pull/33044)
+- **Descrizione**:  Allows for diagrams to use paint effects, including drop shadows, outer glows, etc...
+- **Sponsored by** SLYR
+
 ##	New diagram type "stacked bars"
 - **author**:	[nyalldawson](https://twitter.com/nyalldawson)
 - **merged**:	2019-11-24T09:11:22Z
 - **PR**:	[33043](https://github.com/qgis/QGIS/pull/33043)
+- **Descrizione**:  Stacks bars of varying colors for each attribute on top of each other vertically or horizontally. Designed to match the "Stacked" chart renderer option available in ArcGIS.
+- **Sponsored by** SLYR
+
+![](https://user-images.githubusercontent.com/1829991/69490593-23860f80-0ed6-11ea-889b-bc0a9ba38851.png)
+
 ##	Diagrams - add option to show axis for histogram plots; many fixes
 - **author**:	[nyalldawson](https://twitter.com/nyalldawson)
 - **merged**:	2019-11-23T08:06:19Z
 - **PR**:	[33029](https://github.com/qgis/QGIS/pull/33029)
+- **Descrizione**:  (The fixes will be manually backported) This adds the option to show the histogram axis for histogram diagram types.
+- **Sponsored by** SLYR
+
+![](https://user-images.githubusercontent.com/1829991/69471701-02e28a80-0dee-11ea-8699-c935d1dc4985.png)
+
 ##	Streamlines Renderer for vector dataset on mesh layer.
 - **author**:	vcloarec
 - **milestone**:	3.12.0
 - **merged**:	2019-11-25T07:54:12Z
 - **tags**:	Feature;Mesh
 - **PR**:	[32996](https://github.com/qgis/QGIS/pull/32996)
+- **Descrizione**:  ixes #29534 - The vector dataset of a mesh layer is currently only rendered with arrows. This PR adds a new feature to render vectors field with streamlines. The streamlines are seeded with a start point. The seeding can be done from the vertices of the mesh, from a user grid or randomly. The user chooses a method in a combo box: On Mesh/grid or Randomly. With the option On Mesh/Grid, by default, the vertices of the mesh are used to start the streamlines, but the user can define a grid (as for arrows) by entering spacing (px). An alternative is to choose Randomly. The start points are defined randomly and the user can then define a density that represents the part of pixels occupied by streamlines in the extent of the mesh displayed on the screen.
+
+![](https://user-images.githubusercontent.com/7416892/69353527-055dac80-0c55-11ea-9afd-2d0a38c3c8da.gif)
+
 ##	Add option to control pie diagram angular direction
 - **author**:	[nyalldawson](https://twitter.com/nyalldawson)
 - **merged**:	2019-11-21T23:01:51Z
 - **PR**:	[32986](https://github.com/qgis/QGIS/pull/32986)
+- **Descrizione**:  I.e. control whether the sections are rendered in a clockwise or anticlockwise direction
+- **Sponsored by** SLYR
+
 ##	Add spacing option for vector layer bar chart diagrams
 - **author**:	[nyalldawson](https://twitter.com/nyalldawson)
 - **merged**:	2019-11-21T05:21:45Z
 - **PR**:	[32984](https://github.com/qgis/QGIS/pull/32984)
+- **Descrizione**:  Allows for user-controlled spacing between each bar in the chart.
+- **Sponsored by** SLYR
+
 ##	Allow to delete custom label position
 - **author**:	3nids
 - **merged**:	2019-11-20T10:46:22Z
 - **tags**:	Feature;Labeling
 - **PR**:	[32942](https://github.com/qgis/QGIS/pull/32942)
+- **Descrizione**:  by pressing DEL key when moving the label.
+
+![](./imgs/canc_label.gif)
+
 ##	Add search box to layout manager
 - **author**:	[nyalldawson](https://twitter.com/nyalldawson)
 - **milestone**:	3.12.0
 - **merged**:	2019-11-20T07:38:29Z
 - **PR**:	[32939](https://github.com/qgis/QGIS/pull/32939)
+- **Descrizione**:  Allows filtering the list of layouts in a project by name, handy when a project has many layouts..!
+
+![](./imgs/32939.png)
+
 ##	is_valid expression
 - **author**:	pkinglinz
 - **merged**:	2019-11-17T16:31:49Z
 - **tags**:	Expressions;Feature
 - **PR**:	[32900](https://github.com/qgis/QGIS/pull/32900)
+- **Descrizione**:  Add an is_valid function to the expressions, which reuses GEOS is valid and returns true if a geometry is valid; if it is well-formed in 2D according to the OGC rules. Based of @NathanW2 workshop at FOSS4g Oceania.
+I have tested the function manually and confirmed the tests pass, however I can't get my build to produce the help files to check if this or correct. I"m not sure if "Uses GEOS" is needed in the help file.
+
+![](https://github.com/gbvitrano/HfcQGIS/blob/master/img/geometria/is_valid/is_valid1.png)
+
 ##	Processing raster calc: add missing btns and validate
 - **author**:	[elpaso](https://twitter.com/elpaso66)
 - **merged**:	2019-11-16T07:19:28Z
 - **tags**:	Feature;GUI/UX;Processing
 - **PR**:	[32890](https://github.com/qgis/QGIS/pull/32890)
+- **Descrizione**:  Add missing buttons for ABS/MIN/MAX and validate expression.
+
+![](https://user-images.githubusercontent.com/142164/68952420-1bd0b780-07c0-11ea-88d1-2ad0a8b5591e.gif)
+
 ##	Make the DXF renderer ready for background threading and fix symbology
-- **author**:	m-kuhn
+- **author**:	[m-kuhn](https://twitter.com/_mkuhn)
 - **merged**:	2019-11-14T08:47:23Z
 - **PR**:	[32770](https://github.com/qgis/QGIS/pull/32770)
+- **Descrizione**:  This puts the whole dxf export into one single rendering process and prefetches information related to this before starting to render. The immediate benefit is to fix symbology. The current code writes symbol blocks for symbol layers (e.g. for dashed lines), when the lines are actually rendered, they don't reference the block. This was caused by the fact that rendering was restarted for writing blocks and for writing entities. With the result that different clones of the symbol layers were used and therefore could not be matched. The advantage in the longer run is that we will be able to run dxf exports in the background (allow to cancel, processing algorithms, ...) because they no longer rely on the QgsVectorLayer objects but rather on feature source and other threading friendly facilities.
+
 ##	Add Fuzzy Logic raster algorithms
 - **author**:	root676
 - **merged**:	2019-11-10T19:26:03Z
 - **tags**:	Feature;Processing
 - **PR**:	[32701](https://github.com/qgis/QGIS/pull/32701)
+- **Descrizione**:  his PR proposes six new processing algorithms from the domain of fuzzy logic raster analysis, a method commonly used in site analysis. The proposed Fuzzify raster algorithms transform an input raster to a fuzzified raster and thereby assigns values between 0 (no membership) and 1 (full membership) following a fuzzy membership function. Each function is implemented in a separate algorithm due to varying number and type of parameter functions and inplement a base class in order to avoid code duplication. Currently, the functions implement
+
+  * **Linear** fuzzy membership
+  * **Power** fuzzy membership
+  * **Large** fuzzy membership
+  * **Small** fuzzy membership
+  * **Gaussian** fuzzy membership
+  * **Near** fuzzy membership
+
+Example graphs are provided below. The equations are all sourced from Kritikos, T., et al. (2014). They are also available in the ArcGIS 10.x Spatial Analyst algorithm 'Fuzzy Membership' and now become available for open source GIS for the first time. The algorithm names are orientated after the functions provided by ESRI algorithms in order to make access and usage for proprietory GIS users easier.
+
+![](https://user-images.githubusercontent.com/9716552/68340534-e56faa00-00e6-11ea-85af-3473c9f917ce.png)
+
+Output fuzzified layer showcasing location suitability for a certain kind of crop by applying a linear fuzzy membership function:
+
+![](https://user-images.githubusercontent.com/9716552/68341161-2ae0a700-00e8-11ea-8d27-9a3064ff9af7.png)
+
 ##	Server OAPIF simple transactions
 - **author**:	[elpaso](https://twitter.com/elpaso66)
 - **milestone**:	3.12.0
 - **merged**:	2019-11-15T13:21:04Z
 - **tags**:	Feature;Server
 - **PR**:	[32694](https://github.com/qgis/QGIS/pull/32694)
+- **Descrizione**:  Simple OAPIF server transactions : Preliminary specs:
+<https://github.com/opengeospatial/ogcapi-features/blob/master/extensions/transactions/TX_Notes.adoc>
+
 ##	Server OAPIF properties
 - **author**:	[elpaso](https://twitter.com/elpaso66)
 - **merged**:	2019-11-06T09:48:05Z
 - **tags**:	Feature;Server
 - **PR**:	[32655](https://github.com/qgis/QGIS/pull/32655)
+-  **Descrizione**:  Makes it possible to specify a comma separate list of attributes to be returned by items call. This is apparently not in core specifications but most of sample implementations supports it and well, it's just useful. Also adds nl2br utility function for templates.
+
 ##	HAlign/VAlign support for TEXT
-- **author**:	m-kuhn
+- **author**:	[m-kuhn](https://twitter.com/_mkuhn)
 - **merged**:	2019-11-07T15:37:07Z
 - **tags**:	DXF/DWG;Feature
 - **PR**:	[32629](https://github.com/qgis/QGIS/pull/32629)
+- **Descrizione**:  halign / valign support for dxf
+
 ##	Add save multiple styles action to style menu
 - **author**:	[elpaso](https://twitter.com/elpaso66)
 - **merged**:	2019-11-11T10:25:30Z
 - **tags**:	Feature;GUI/UX
 - **PR**:	[32628](https://github.com/qgis/QGIS/pull/32628)
+- **Descrizione**: Adds the possibility to save/export multiple styles at once in QML/SLD and in the DB, in case of file system export an incremental number is appended to the base file name i.e. export.qml, export_1.qml etc. in case of DBs the user can specify a new name for the exported syles, and in that case an incremental number is appended to the base style name i.e. name, name 1, name 2 etc., if the new name is left blank, the style name is used and in case of conflicts the incremental number is appended as well.
+
+![](https://user-images.githubusercontent.com/142164/68129308-9c1e2f80-ff19-11e9-92d0-95d5dadb5eee.gif)
+
 ##	Add expression functions for converting to/from wkb
 - **author**:	[nyalldawson](https://twitter.com/nyalldawson)
 - **merged**:	2019-11-04T03:00:12Z
 - **PR**:	[32561](https://github.com/qgis/QGIS/pull/32561)
+- **Descrizione**:  Adds geom_from_wkb and geom_to_wkb, which mirror the existing geom_from_wkt/geom_to_wkt functions but for WKB representations of geometries. 
+Since QGIS 3.6 we've had good support for binary blob values in expressions and field values, so adding these functions allows users to work with binary blob fields containing WKB representations of geometries (e.g. with a geometry generator showing the encoded geometries)
+
+|[](https://github.com/gbvitrano/HfcQGIS/blob/master/img/geometria/geom_from_wkb/geom_from_wkb1.png)
+
 ##	Add - **merged**:_from_epoch (MSec from epoch) expression function
 - **author**:	rduivenvoorde
 - **merged**:	2019-11-22T10:09:38Z
 - **PR**:	[32551](https://github.com/qgis/QGIS/pull/32551)
+- **Descrizione**:  Adds a function to create a DateTime from a seconds since epoch timestamp, to be used in expresssions. As there is an 'epoch' function working in MilliSeconds (and the original Qt function also does MilliSeconds, I create it to use mSecs).
+
+![](https://github.com/gbvitrano/HfcQGIS/blob/master/img/data_e_ora/datetime_from_epoch1.png)
+
 ##	Ignored credentials temporary cache
 - **author**:	[elpaso](https://twitter.com/elpaso66)
 - **milestone**:	3.12.0
 - **merged**:	2019-11-01T08:02:35Z
 - **tags**:	Feature;GUI/UX
 - **PR**:	[32546](https://github.com/qgis/QGIS/pull/32546)
+- **Descrizione**:  A new "Ignore" button is added to the dialog, with a tooltip explaining what it does.
+
+![](https://user-images.githubusercontent.com/142164/67949543-2dbf3180-fbe8-11e9-9a94-70acca5f8154.png)
+
 ##	Create child feature with geometry from the relation editor
 - **author**:	troopa81
 - **merged**:	2019-12-04T13:46:33Z
@@ -445,7 +566,7 @@ A push button is added to reload the reference time provided with dataset groups
 - **merged**:	2019-10-28T04:34:31Z
 - **PR**:	[32241](https://github.com/qgis/QGIS/pull/32241)
 ##	Export mesh contours & resampling
-- **author**:	PeterPetrik
+- **author**:	[PeterPetrik](https://github.com/PeterPetrik)
 - **milestone**:	3.12.0
 - **merged**:	2019-10-29T22:16:06Z
 - **tags**:	Feature;Mesh
