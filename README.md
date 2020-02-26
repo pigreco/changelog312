@@ -184,13 +184,13 @@ inherit this default settings. The Project Properties dialog also has a new sett
 - **tags**:	Changelog;Feature;Processing
 - **PR**:	[33552](https://github.com/qgis/QGIS/pull/33552)
 - **Descrizxione**: Offers the following benefits over the GRASS/SAGA versions:
-
   * Full support for z/m values and handling curved geometries without loss
   * of curves
   * Works with all native data types, no need for format transformation
   * Supports dynamic (data defined, per feature) translate/scale/rotate parameters
   * Allows transformation and scaling of both Z and M values (if present)
   * Supports in-place edit mode
+  
 * Fixes [#33550](https://github.com/qgis/QGIS/issues/33550)
 
 ![](./imgs/33552.png)
@@ -395,12 +395,16 @@ Works with PDF, ODS, XLS(X), CSV, TXT, PNG, JPEG, TIFF, SVG (other types will li
 - **Descrizione**:  I.e. control whether the sections are rendered in a clockwise or anticlockwise direction
 - **Sponsored by** SLYR
 
+![](imgs/32986.png)
+
 ##	Add spacing option for vector layer bar chart diagrams
 - **author**:	[nyalldawson](https://twitter.com/nyalldawson)
 - **merged**:	2019-11-21T05:21:45Z
 - **PR**:	[32984](https://github.com/qgis/QGIS/pull/32984)
 - **Descrizione**:  Allows for user-controlled spacing between each bar in the chart.
 - **Sponsored by** SLYR
+
+![](./imgs/32984.png)
 
 ##	Allow to delete custom label position
 - **author**:	3nids
@@ -530,94 +534,161 @@ Since QGIS 3.6 we've had good support for binary blob values in expressions and 
 - **author**:	troopa81
 - **merged**:	2019-12-04T13:46:33Z
 - **PR**:	[32528](https://github.com/qgis/QGIS/pull/32528)
+- **Descrizione**:  This PR allows to create a child feature by digitizing its geometry in the canvas directly from the relation editor widget.
+
+![](https://user-images.githubusercontent.com/14358135/67881832-87205580-fb41-11e9-9d50-fbe348a2daf4.gif)
+
 ##	Value relation restore missing layers from DBs
 - **author**:	[elpaso](https://twitter.com/elpaso66)
 - **milestone**:	3.12.0
 - **merged**:	2019-11-04T11:03:41Z
 - **tags**:	Feature;Requires Tests!
 - **PR**:	[32487](https://github.com/qgis/QGIS/pull/32487)
+- **Descrizione**:  Checks for missing layers in value relation widget and loads them automatically (if possible), also warns the user if the layer could not be found.
+- **Sponsored by** ARPA Piemonte
+
 ##	Selection widget in feature selection dialog
 - **author**:	troopa81
 - **merged**:	2019-12-16T10:32:26Z
 - **PR**:	[32472](https://github.com/qgis/QGIS/pull/32472)
+- **Descrizione**:  This PR is the following of #31951 - it adds the feature selection widget ![widget_sel1](https://user-images.githubusercontent.com/14358135/65410788-89c5b780-ddeb-11e9-921e-18d170f14b0f.png) and ![widget_sel2](https://user-images.githubusercontent.com/14358135/65410787-892d2100-ddeb-11e9-8fa3-f6fec9af0b9a.png) to the feature selection dialog and make it non modal.
+
+![](https://user-images.githubusercontent.com/14358135/67744684-804ef100-fa22-11e9-94d6-4717bbf3cd87.gif)
+
 ##	add gdal_viewshed algorithm
 - **author**:	alexbruy
 - **merged**:	2019-11-06T03:40:35Z
 - **tags**:	Feature;Processing
 - **PR**:	[32463](https://github.com/qgis/QGIS/pull/32463)
+- **Descrizione**:  Expose new `gdal_viewshed` tool via Processing toolbox. Note: this requires **GDAL >= 3.1**.
+
 ##	Add density-based point count for the random marker fill
 - **author**:	nirvn
 - **merged**:	2019-10-30T05:04:14Z
 - **tags**:	Feature;Symbology
 - **PR**:	[32456](https://github.com/qgis/QGIS/pull/32456)
+- **Descrizione**:  This PR adds a density-based point count method to @nyalldawson 's brand new random marker fill.
+
+![](https://user-images.githubusercontent.com/1728657/67672096-c2881c00-f9a9-11e9-8394-d73505d05309.gif)
+
 ##	Server wfs3 timefilter dimensions
 - **author**:	[elpaso](https://twitter.com/elpaso66)
 - **milestone**:	3.12.0
 - **merged**:	2019-10-30T17:29:50Z
 - **tags**:	Feature;Server
 - **PR**:	[32322](https://github.com/qgis/QGIS/pull/32322)
+- **Descrizione**: Filters can be configured as Date or Time filters in WMS dimensions configuration (I need to work a bit on the GUI to make sure it is clear that Date and Time apply to OAPIF and WMS only accepts Time, but I need to check it).
+- **Sponsored by** OSGeo
+
 ##	Add OGC API - Features (OAPIF) provider
-- **author**:	rouault
+- **author**:	[rouault](https://twitter.com/EvenRouault)
 - **merged**:	2019-10-25T20:48:00Z
 - **PR**:	[32262](https://github.com/qgis/QGIS/pull/32262)
+- **Descrizione**: Implements what was mentionned in <https://lists.osgeo.org/pipermail/qgis-developer/2019-September/058649.html>
+
 ##	Random marker fill symbol layer type
 - **author**:	[nyalldawson](https://twitter.com/nyalldawson)
 - **milestone**:	3.12.0
 - **merged**:	2019-10-28T04:34:31Z
 - **PR**:	[32241](https://github.com/qgis/QGIS/pull/32241)
+- **Descrizione**:  This commit adds a new fill symbol layer type "Random marker fill". It allows polygon features to be rendered using a marker symbol placed at random locations within the polygon boundary.
+- **Sponsored by** SLYR
+
+![](https://user-images.githubusercontent.com/1829991/66734145-51267480-eea5-11e9-9e0a-3bfeee15f976.png)
+
 ##	Export mesh contours & resampling
 - **author**:	[PeterPetrik](https://github.com/PeterPetrik)
 - **milestone**:	3.12.0
 - **merged**:	2019-10-29T22:16:06Z
 - **tags**:	Feature;Mesh
 - **PR**:	[32201](https://github.com/qgis/QGIS/pull/32201)
+- **Descrizione**:  fixes [#31550](https://github.com/qgis/QGIS/issues/31550) - added the new option in the mesh layer styling dialog to be able to resample face-defined data to vertices. This was required for contour export algorithm, since it is well defined only on the data defined on vertices.
+
+![](https://user-images.githubusercontent.com/804608/66637777-00e4b380-ec14-11e9-86be-ec4fc218434d.png)
+![](https://user-images.githubusercontent.com/804608/66637777-00e4b380-ec14-11e9-86be-ec4fc218434d.png)
+
 ##	Feature update layer selection relation widgets
 - **author**:	troopa81
 - **milestone**:	3.12.0
 - **merged**:	2019-10-29T07:32:32Z
 - **PR**:	[31951](https://github.com/qgis/QGIS/pull/31951)
+- **Descrizione**:   Before this PR, selected features in relation widget and feature selection dialog for link existing child was not connected to layer selection. 
+This is problematic because you cannot use map selection if you want to choose child to create a relation with a given parent. This is what it looks like with the PR.
+
+![](https://user-images.githubusercontent.com/14358135/65410406-90076400-ddea-11e9-8c3c-fb05c50b6e91.gif)
+
 ##	fix #29326 Adding playback function for mesh datasets
 - **author**:	MarcusUrban
 - **milestone**:	3.12.0
 - **merged**:	2019-10-31T08:09:48Z
 - **tags**:	Feature;Mesh
 - **PR**:	[31875](https://github.com/qgis/QGIS/pull/31875)
+- **Descrizione**:  Added Play/Stop button to start stop dataset playback. Qt icons added for buttons controlling displayed dataset frame, so they match added Play/Stop button
+
+![](https://user-images.githubusercontent.com/55395434/65317179-9bb11b80-db9b-11e9-99a0-9c1e72edb2fd.gif)
+
 ##	Add json support to WMS GetLegendGraphic
 - **author**:	elemoine
 - **milestone**:	3.12.0
 - **merged**:	2019-10-26T00:51:40Z
 - **tags**:	Feature;Merge After Thaw;Server
 - **PR**:	[31747](https://github.com/qgis/QGIS/pull/31747)
+- **Descrizione**:  This PR adds support for GetLegendGraphic responses encoded as JSON. It builds on previous work by @pblottiere, who added QgsLegendRenderer::exportLegendToJson for that exact purpose. For example a GetLegendGraphic request with FORMAT=image/png producing the image:
+
+![](https://user-images.githubusercontent.com/76594/64876231-fbb13a80-d64e-11e9-83e5-120fb1bc0ea8.png)
+
 ##	Add option to set color for rendering nodata pixels in raster layers
 - **author**:	[nyalldawson](https://twitter.com/nyalldawson)
 - **milestone**:	3.12.0
 - **merged**:	2019-10-27T00:07:05Z
 - **tags**:	Feature;Merge After Thaw
 - **PR**:	[31728](https://github.com/qgis/QGIS/pull/31728)
+- **Descrizione**:  Allows raster nodata pixels to be colored in a specific (non-transparent) color. Designed to match the "Display background value" option from ArcMap.
+- **Sponsored by** SLYR
+
+![](https://user-images.githubusercontent.com/1728657/64846100-f4c9fe00-d635-11e9-8acb-367ad2dd2915.png)
+
 ##	Hash expressions
 - **author**:	[lbartoletti](https://twitter.com/lo_bartoletti)
 - **merged**:	2019-10-25T22:32:27Z
 - **tags**:	Feature;Merge After Thaw
 - **PR**:	[31726](https://github.com/qgis/QGIS/pull/31726)
+- **Descrizione**:  This PR adds hash functions to QGIS. No new dependency is required since it uses QCryptographicHash available in QtCore. Use case is the same as PgCrypto but in client side for all supported format.
+
+![](https://github.com/gbvitrano/HfcQGIS/blob/master/img/conversioni/hash1.png)
+
 ##	Parallelize snap caching
 - **author**:	troopa81
 - **milestone**:	3.10.1
 - **merged**:	2019-10-31T08:31:21Z
 - **PR**:	[31648](https://github.com/qgis/QGIS/pull/31648)
+- **Descrizione**:  The snapToCurrentLayer method doesn't prepare the index and expect to be executed synchronously. So the temporary point locator must be synchronous.
+
 ##	Add z distance
 - **author**:	ismailsunni
 - **milestone**:	3.12.0
 - **merged**:	2019-10-29T21:55:01Z
 - **PR**:	[31451](https://github.com/qgis/QGIS/pull/31451)
+- **Descrizione**:  The contents: Adding Z-Distance to the 3D Measurement dialog (suggested by @timlinux ); Fixing not clearing the measurement table when restart using right-click
+
+[](https://user-images.githubusercontent.com/1421861/63779698-a9061d80-c8ef-11e9-9e77-e2a652958620.gif)
+
 ##	Selective masking
 - **author**:	mhugo
 - **milestone**:	3.12.0
 - **merged**:	2019-11-07T07:17:26Z
 - **tags**:	Feature;Labeling;Symbology
 - **PR**:	[30747](https://github.com/qgis/QGIS/pull/30747)
+- **Descrizione*: This PR covers the implementation of "selective masking" as depicted in [qgis/QGIS-Enhancement-Proposals#63](https://github.com/qgis/QGIS-Enhancement-Proposals/issues/63)
+
+![](https://user-images.githubusercontent.com/1618556/62111873-d68c8680-b2b1-11e9-8cd4-19077f99a8ff.gif)
+
 ##	Bad Layer Handler Improvements
 - **author**:	roya0045
 - **milestone**:	3.12.0
 - **merged**:	2019-11-21T10:51:54Z
 - **tags**:	Feature;Squash!
 - **PR**:	[30297](https://github.com/qgis/QGIS/pull/30297)
+- **Descrizione**:  This improves upon the previous work that I did for the bad feature handler. This aims to add a button that will search for layers in an outward pattern up 4 levels (levels can be changed). The layers found will be highlighted in green. Then the user can hit apply or ok to confirm. If the folder containing the old path, it will move up until it reaches a valid folder and search from there. If the next valid folder is less than 4 levels away, it will also search up 4 levels, otherwise the search will be done only from the valid folder. The layers in red will have to be changed through some other means. The way alternative basepath are stored and handled has also changed. I have added existence check when attempting all alternative basepaths for a given original path. This add a new button to launch the auto finder function. A query could be added to ask for the maximum depth to move up. In our current architecture 4 level is not much but for a user working in local, this might mean that the search could end up near the root and take a long time to find a file. Hence why I have added a way to limit vertical movement by ensuring that we are 3 folder away from the drive (by checking the number of system separator). This is open for discussion.
+
+![](https://user-images.githubusercontent.com/12854129/66336231-b0671080-e90a-11e9-9a53-8b1b5edd1579.gif)
