@@ -31,6 +31,8 @@ like WMTS or XYZ tiles.
 are unchanged, added or deleted between the two. It is designed for comparing
 two different versions of the same dataset.
 
+![](imgs/33832.png)
+
 ##	New algorithm "Rename table field"
 - **author**:	[nyalldawson](https://twitter.com/nyalldawson)
 - **milestone**:	3.12.0
@@ -39,6 +41,8 @@ two different versions of the same dataset.
 - **PR**:	[33807](https://github.com/qgis/QGIS/pull/33807)
 - **Descrizione**:  Takes an input layer, existing field and a new name for the field, and
 outputs a new layer with the selected field renamed.
+
+![](./imgs/33807.png)
 
 ##	Show distance from GPS lock position to current cursor
 - **author**:	[nyalldawson](https://twitter.com/nyalldawson)
