@@ -1,4 +1,4 @@
-# Changelog312
+# Changelog 3.12 București
 
 The following changelogs are the result of this filter:
 
@@ -6,7 +6,7 @@ The following changelogs are the result of this filter:
 is:pr is:closed label:feature merged:2019-10-25T00:00:00Z..2020-02-21T00:00:00Z
 ```
 
-Changelog 3.12 București - Release date: 21 February, 2020
+Release date: 21 February, 2020
 
 ![](imgs/splash_3_12.png)
 
