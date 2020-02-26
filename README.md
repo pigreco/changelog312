@@ -69,43 +69,78 @@ are just touching or have just tiny sliver polygon overlaps.
 - **merged**:	2020-01-14T06:08:21Z
 - **tags**:	Feature;Print Layouts
 - **PR**:	[33734](https://github.com/qgis/QGIS/pull/33734)
+- **Descrizione**:  This new item type allows for creation of tables with contents manually entered by users (i.e. spreadsheet style), so that users can create completely custom tables. Supports control custom cell contents, foreground and background colors (and soon, preset row and column heights).
+- **Sponsored by** City of Canning
+
+![](https://user-images.githubusercontent.com/1829991/72198838-ef16e480-347e-11ea-9421-cde571654ddb.png)
+
 ##	Fix invalid attributes dialog on copy to another layer
 - **author**:	signedav
 - **milestone**:	3.12.0
 - **merged**:	2020-01-15T07:00:43Z
 - **tags**:	Feature;Needs Documentation
 - **PR**:	[33688](https://github.com/qgis/QGIS/pull/33688)
+- **Descrizione**:  It's possible to copy features from one layer to another.
+If there are the same fields in the destination layer, then the attributes for them are taken from the original feature. If not, the default value is taken. Otherwise the new attribute is null. If the destination layer has constraints on the fields, these should be fulfilled now or disregarded on purpose. But not just copied invalid like it used to do.
+
+![](https://user-images.githubusercontent.com/28384354/72243171-7e410b00-35eb-11ea-8903-11bd56cd9da6.gif)
+
 ##	Native PostGIS raster data provider
 - **author**:	[elpaso](https://twitter.com/elpaso66)
 - **milestone**:	3.12.0
 - **merged**:	2020-01-17T10:31:28Z
 - **PR**:	[33685](https://github.com/qgis/QGIS/pull/33685)
+- **Descrizione**:  This is an implementation of a PostGIS raster data provider in QGIS core. Tiles are cached in RAM memory.
+- **Sponsored by** Christmas Holidays Inc.
+
 ##	Allow customization of the items shown in browser
 - **author**:	PeterPetrik
 - **milestone**:	3.12.0
 - **merged**:	2020-01-15T09:08:59Z
 - **PR**:	[33679](https://github.com/qgis/QGIS/pull/33679)
+- **Descrizione**:  Allow customization of the items shown in browser. User can decide (in the Interface Customization dialog) to hide some of the root items in the browser panel (e.g. Favourites, or POSTGIS provider, ...)
+- **Sponsored by** Limerick City and County Council
+
+![](https://user-images.githubusercontent.com/804608/72050388-466f5600-32c1-11ea-94f5-092cc8471243.png)
+
 ##	Add setting for format to show angular bearings to projects
 - **author**:	[nyalldawson](https://twitter.com/nyalldawson)
 - **merged**:	2020-01-09T04:10:31Z
 - **tags**:	Feature;Needs Documentation
 - **PR**:	[33674](https://github.com/qgis/QGIS/pull/33674)
+- **Descrizione**:  The Settings - Options - Map Tools tab contains a new setting for controlling the default format to use for displaying angular bearings for newly created projects. Whenever a new project is created, it will
+inherit this default settings. The Project Properties dialog also has a new setting for the project-specific bearing format. The intention is that whenever angular bearings are shown in QGIS, they will be formatted using the current project's bearing format settings. In this PR I've done this for the status bar pan direction message. Also includes lots of nice API additions providing a stable, easy to discover place to set and retrieve settings like the bearing format.
+
+![](https://user-images.githubusercontent.com/1829991/72029046-5fcbce80-32d0-11ea-8571-0ae8fa8e3bb0.gif)
+
 ##	Add user control over scalebar numeric formats
 - **author**:	[nyalldawson](https://twitter.com/nyalldawson)
 - **merged**:	2020-01-09T06:51:51Z
 - **tags**:	Changelog;Feature;Needs Documentation;Print Layouts
 - **PR**:	[33657](https://github.com/qgis/QGIS/pull/33657)
+- **Descrizione**:  Amongst other follow ups to the recent numeric format API support, this exposes the option for controlling the numeric format used by a layout scalebar. It gives users control over all the formatting properties for the numbers in scalebars, including whether they want thousand separators, decimal places, scientific notation, etc. Very useful in the case of making maps for audiences outside of the current QGIS locale, or when you'd just prefer to vary the style from the locale defaults (e.g. adding thousands separators when the locale default is to hide them).
+
+![](./imgs/33657.png)
+
 ##	Add Refresh action to OGC services
 - **author**:	Samweli
 - **milestone**:	3.12.0
 - **merged**:	2020-01-18T02:18:21Z
 - **PR**:	[33651](https://github.com/qgis/QGIS/pull/33651)
+- **Descrizione**:  This PR adds refresh action to OGC Services and also fixes [#33621](https://github.com/qgis/QGIS/issues/33621). For the [#33621](https://github.com/qgis/QGIS/issues/33621), I have override the WMSLayerItem [equal](https://github.com/Samweli/QGIS/blob/5b8759c5cd126b1da11996e19a706beff6d28ba3/src/providers/wms/qgswmsdataitems.h#L81) function from QgsLayerItem, to provide a further layer properties comparison ( leaving out path and name only comparison ), might need others efforts to increase the function layer properties coverage. I have also added a new class [QgsWMSLayerCollectionItem](https://github.com/Samweli/QGIS/blob/5b8759c5cd126b1da11996e19a706beff6d28ba3/src/providers/wms/qgswmsdataitems.h#L49) to handle the WMS Layers which enclose other layers. So we can handle them separately. I found it tricky to fix them especially in the #33621 case.
+
+![](https://user-images.githubusercontent.com/2663775/71974919-cfd04b00-3223-11ea-834d-ff016c70a8c6.gif)
+
 ##	Allow layout attribute tables to be styled using the foreground and background colors of matching conditional styles
 - **author**:	[nyalldawson](https://twitter.com/nyalldawson)
 - **milestone**:	3.12.0
 - **merged**:	2020-01-08T02:31:25Z
 - **tags**:	Changelog;Feature;Needs Documentation;Print Layouts
 - **PR**:	[33638](https://github.com/qgis/QGIS/pull/33638)
+- **Descrizione**:  When the new "Apply layer conditional styling colors" option is enabled in the layout attribute table settings, any conditional styling rules present in the layer will be applied inside the layout attribute table (foreground and background colors only, for now!). Refs [#25712](https://github.com/qgis/QGIS/issues/25712)
+
+![](./imgs/33638.png)
+
 ##	Support for Oracle curves and surfaces
 - **author**:	troopa81
 - **milestone**:	3.12.0
