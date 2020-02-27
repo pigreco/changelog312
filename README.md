@@ -5,10 +5,89 @@ The following changelogs are the result of this [filter](https://github.com/qgis
 ```
 is:pr is:closed label:feature merged:2019-10-25T00:00:00Z..2020-02-21T00:00:00Z
 ```
-
 Release date: 21 February, 2020
 
 ![](imgs/splash_3_12.png)
+
+<!-- TOC -->
+
+- [Changelog 3.12 București](#changelog-312-bucurești)
+    - [QGIS Development Server Application](#qgis-development-server-application)
+    - [MBTiles raster support in WMS provider](#mbtiles-raster-support-in-wms-provider)
+    - [Add new algorithm: Detect Dataset Changes](#add-new-algorithm-detect-dataset-changes)
+    - [New algorithm "Rename table field"](#new-algorithm-rename-table-field)
+    - [Show distance from GPS lock position to current cursor](#show-distance-from-gps-lock-position-to-current-cursor)
+    - [Add new mode to "Join Attributes by Location" to take attributes from matching feature with largest area of overlap only](#add-new-mode-to-join-attributes-by-location-to-take-attributes-from-matching-feature-with-largest-area-of-overlap-only)
+    - [New layout item type: manually created fixed tables](#new-layout-item-type-manually-created-fixed-tables)
+    - [Fix invalid attributes dialog on copy to another layer](#fix-invalid-attributes-dialog-on-copy-to-another-layer)
+    - [Native PostGIS raster data provider](#native-postgis-raster-data-provider)
+    - [Allow customization of the items shown in browser](#allow-customization-of-the-items-shown-in-browser)
+    - [Add setting for format to show angular bearings to projects](#add-setting-for-format-to-show-angular-bearings-to-projects)
+    - [Add user control over scalebar numeric formats](#add-user-control-over-scalebar-numeric-formats)
+    - [Add Refresh action to OGC services](#add-refresh-action-to-ogc-services)
+    - [Allow layout attribute tables to be styled using the foreground and background colors of matching conditional styles](#allow-layout-attribute-tables-to-be-styled-using-the-foreground-and-background-colors-of-matching-conditional-styles)
+    - [Support for Oracle curves and surfaces](#support-for-oracle-curves-and-surfaces)
+    - [New parameter type for map themes](#new-parameter-type-for-map-themes)
+    - [Rotate expression function (with followups)](#rotate-expression-function-with-followups)
+    - [Add native affine transform algorithm for vectors](#add-native-affine-transform-algorithm-for-vectors)
+    - [Allow dropping a map layer from the layer tree onto a projection selection widget](#allow-dropping-a-map-layer-from-the-layer-tree-onto-a-projection-selection-widget)
+    - [Load 3D vector layer data in background + tiling](#load-3d-vector-layer-data-in-background--tiling)
+    - [Stored expressions](#stored-expressions)
+    - [List referenced layer values in Expression Builder](#list-referenced-layer-values-in-expression-builder)
+    - [Other average methods 3d mesh](#other-average-methods-3d-mesh)
+    - [Fixes time reference for mesh layer #32186 #33399 #31933](#fixes-time-reference-for-mesh-layer-32186-33399-31933)
+    - [Add expressions is_empty(geom)  is_empty_or_null(geom)](#add-expressions-is_emptygeom--is_empty_or_nullgeom)
+    - [Support datasets with data defined on faces in mesh calculator](#support-datasets-with-data-defined-on-faces-in-mesh-calculator)
+    - [Show the total pan distance and bearing in the status bar](#show-the-total-pan-distance-and-bearing-in-the-status-bar)
+    - [Add option to auto-rotate canvas to GPS bearing; show GPS bearing as a line over map](#add-option-to-auto-rotate-canvas-to-gps-bearing-show-gps-bearing-as-a-line-over-map)
+    - [Show html files in browser panel](#show-html-files-in-browser-panel)
+    - [New algorithm "Repair Shapefile"](#new-algorithm-repair-shapefile)
+    - [Static particle traces for rendering mesh vector dataset](#static-particle-traces-for-rendering-mesh-vector-dataset)
+    - [Stacked 3d mesh (part 1.)](#stacked-3d-mesh-part-1)
+    - [Show "Open Document..." action when right clicking certain](#show-open-document-action-when-right-clicking-certain)
+    - [Allow drag and drop of pictures onto layouts](#allow-drag-and-drop-of-pictures-onto-layouts)
+    - [Paint effect support for diagram renderer](#paint-effect-support-for-diagram-renderer)
+    - [New diagram type "stacked bars"](#new-diagram-type-stacked-bars)
+    - [Diagrams - add option to show axis for histogram plots; many fixes](#diagrams---add-option-to-show-axis-for-histogram-plots-many-fixes)
+    - [Streamlines Renderer for vector dataset on mesh layer.](#streamlines-renderer-for-vector-dataset-on-mesh-layer)
+    - [Add option to control pie diagram angular direction](#add-option-to-control-pie-diagram-angular-direction)
+    - [Add spacing option for vector layer bar chart diagrams](#add-spacing-option-for-vector-layer-bar-chart-diagrams)
+    - [Allow to delete custom label position](#allow-to-delete-custom-label-position)
+    - [Add search box to layout manager](#add-search-box-to-layout-manager)
+    - [is_valid expression](#is_valid-expression)
+    - [Processing raster calc: add missing btns and validate](#processing-raster-calc-add-missing-btns-and-validate)
+    - [Make the DXF renderer ready for background threading and fix symbology](#make-the-dxf-renderer-ready-for-background-threading-and-fix-symbology)
+    - [Add Fuzzy Logic raster algorithms](#add-fuzzy-logic-raster-algorithms)
+    - [Server OAPIF simple transactions](#server-oapif-simple-transactions)
+    - [Server OAPIF properties](#server-oapif-properties)
+    - [HAlign/VAlign support for TEXT](#halignvalign-support-for-text)
+    - [Add save multiple styles action to style menu](#add-save-multiple-styles-action-to-style-menu)
+    - [Add expression functions for converting to/from wkb](#add-expression-functions-for-converting-tofrom-wkb)
+    - [Add - **merged**:_from_epoch (MSec from epoch) expression function](#add---merged_from_epoch-msec-from-epoch-expression-function)
+    - [Ignored credentials temporary cache](#ignored-credentials-temporary-cache)
+    - [Create child feature with geometry from the relation editor](#create-child-feature-with-geometry-from-the-relation-editor)
+    - [Value relation restore missing layers from DBs](#value-relation-restore-missing-layers-from-dbs)
+    - [Selection widget in feature selection dialog](#selection-widget-in-feature-selection-dialog)
+    - [add gdal_viewshed algorithm](#add-gdal_viewshed-algorithm)
+    - [Add density-based point count for the random marker fill](#add-density-based-point-count-for-the-random-marker-fill)
+    - [Server wfs3 timefilter dimensions](#server-wfs3-timefilter-dimensions)
+    - [Add OGC API - Features (OAPIF) provider](#add-ogc-api---features-oapif-provider)
+    - [Random marker fill symbol layer type](#random-marker-fill-symbol-layer-type)
+    - [Export mesh contours & resampling](#export-mesh-contours--resampling)
+    - [Feature update layer selection relation widgets](#feature-update-layer-selection-relation-widgets)
+    - [fix #29326 Adding playback function for mesh datasets](#fix-29326-adding-playback-function-for-mesh-datasets)
+    - [Add json support to WMS GetLegendGraphic](#add-json-support-to-wms-getlegendgraphic)
+    - [Add option to set color for rendering nodata pixels in raster layers](#add-option-to-set-color-for-rendering-nodata-pixels-in-raster-layers)
+    - [Hash expressions](#hash-expressions)
+    - [Parallelize snap caching](#parallelize-snap-caching)
+    - [Add z distance](#add-z-distance)
+    - [Selective masking](#selective-masking)
+    - [Bad Layer Handler Improvements](#bad-layer-handler-improvements)
+- [Statistics](#statistics)
+- [Authors](#authors)
+- [come è stato realizzato](#come-è-stato-realizzato)
+
+<!-- /TOC -->
 
 ---
 
@@ -19,6 +98,8 @@ Release date: 21 February, 2020
 - ([REVERT](https://github.com/qgis/QGIS/pull/34124))
 - **PR**:	[33921](https://github.com/qgis/QGIS/pull/33921)
 
+[come back](#changelog-312-bucurești)
+
 ##	MBTiles raster support in WMS provider
 - **author**:	[wonder-sk](https://github.com/wonder-sk)
 - **milestone**:	3.12.0
@@ -27,6 +108,8 @@ Release date: 21 February, 2020
 - **PR**:	[33855](https://github.com/qgis/QGIS/pull/33855)
 - **Description**:  This PR adds MBTiles tiled raster map support to WMS provider so that it uses the same code paths
 like WMTS or XYZ tiles.
+
+[come back](#changelog-312-bucurești)
 
 ##	Add new algorithm: Detect Dataset Changes
 - **author**:	[nyalldawson](https://twitter.com/nyalldawson)
@@ -40,6 +123,8 @@ two different versions of the same dataset.
 
 ![](imgs/33832.png)
 
+[come back](#changelog-312-bucurești)
+
 ##	New algorithm "Rename table field"
 - **author**:	[nyalldawson](https://twitter.com/nyalldawson)
 - **milestone**:	3.12.0
@@ -51,6 +136,8 @@ outputs a new layer with the selected field renamed.
 
 ![](./imgs/33807.png)
 
+[come back](#changelog-312-bucurești)
+
 ##	Show distance from GPS lock position to current cursor
 - **author**:	[nyalldawson](https://twitter.com/nyalldawson)
 - **milestone**:	3.12.0
@@ -60,6 +147,8 @@ outputs a new layer with the selected field renamed.
 - **Description**:  When a GPS device is connected, whenever the user moves the cursor over the canvas a live status bar message displays the distance and bearing from the cursor to the GPS fix position.
 
 ![](https://user-images.githubusercontent.com/1829991/72318360-cd6c6600-36e7-11ea-9f2d-9a47d8772623.gif)
+
+[come back](#changelog-312-bucurești)
 
 ##	Add new mode to "Join Attributes by Location" to take attributes from matching feature with largest area of overlap only
 - **author**:	[nyalldawson](https://twitter.com/nyalldawson)
@@ -74,6 +163,8 @@ are just touching or have just tiny sliver polygon overlaps.
   
 ![](./imgs/33754.png)
 
+[come back](#changelog-312-bucurești)
+
 ##	New layout item type: manually created fixed tables
 - **author**:	[nyalldawson](https://twitter.com/nyalldawson)
 - **milestone**:	3.12.0
@@ -84,6 +175,8 @@ are just touching or have just tiny sliver polygon overlaps.
 - **Sponsored by** City of Canning
 
 ![](https://user-images.githubusercontent.com/1829991/72198838-ef16e480-347e-11ea-9421-cde571654ddb.png)
+
+[come back](#changelog-312-bucurești)
 
 ##	Fix invalid attributes dialog on copy to another layer
 - **author**:	signedav
@@ -96,6 +189,8 @@ If there are the same fields in the destination layer, then the attributes for t
 
 ![](https://user-images.githubusercontent.com/28384354/72243171-7e410b00-35eb-11ea-8903-11bd56cd9da6.gif)
 
+[come back](#changelog-312-bucurești)
+
 ##	Native PostGIS raster data provider
 - **author**:	[elpaso](https://twitter.com/elpaso66)
 - **milestone**:	3.12.0
@@ -103,6 +198,8 @@ If there are the same fields in the destination layer, then the attributes for t
 - **PR**:	[33685](https://github.com/qgis/QGIS/pull/33685)
 - **Description**:  This is an implementation of a PostGIS raster data provider in QGIS core. Tiles are cached in RAM memory.
 - **Sponsored by** Christmas Holidays Inc.
+
+[come back](#changelog-312-bucurești)
 
 ##	Allow customization of the items shown in browser
 - **author**:	[PeterPetrik](https://github.com/PeterPetrik)
@@ -114,6 +211,8 @@ If there are the same fields in the destination layer, then the attributes for t
 
 ![](https://user-images.githubusercontent.com/804608/72050388-466f5600-32c1-11ea-94f5-092cc8471243.png)
 
+[come back](#changelog-312-bucurești)
+
 ##	Add setting for format to show angular bearings to projects
 - **author**:	[nyalldawson](https://twitter.com/nyalldawson)
 - **merged**:	2020-01-09T04:10:31Z
@@ -124,6 +223,8 @@ inherit this default settings. The Project Properties dialog also has a new sett
 
 ![](https://user-images.githubusercontent.com/1829991/72029046-5fcbce80-32d0-11ea-8571-0ae8fa8e3bb0.gif)
 
+[come back](#changelog-312-bucurești)
+
 ##	Add user control over scalebar numeric formats
 - **author**:	[nyalldawson](https://twitter.com/nyalldawson)
 - **merged**:	2020-01-09T06:51:51Z
@@ -132,6 +233,8 @@ inherit this default settings. The Project Properties dialog also has a new sett
 - **Description**:  Amongst other follow ups to the recent numeric format API support, this exposes the option for controlling the numeric format used by a layout scalebar. It gives users control over all the formatting properties for the numbers in scalebars, including whether they want thousand separators, decimal places, scientific notation, etc. Very useful in the case of making maps for audiences outside of the current QGIS locale, or when you'd just prefer to vary the style from the locale defaults (e.g. adding thousands separators when the locale default is to hide them).
 
 ![](./imgs/33657.png)
+
+[come back](#changelog-312-bucurești)
 
 ##	Add Refresh action to OGC services
 - **author**:	Samweli
@@ -142,6 +245,8 @@ inherit this default settings. The Project Properties dialog also has a new sett
 
 ![](https://user-images.githubusercontent.com/2663775/71974919-cfd04b00-3223-11ea-834d-ff016c70a8c6.gif)
 
+[come back](#changelog-312-bucurești)
+
 ##	Allow layout attribute tables to be styled using the foreground and background colors of matching conditional styles
 - **author**:	[nyalldawson](https://twitter.com/nyalldawson)
 - **milestone**:	3.12.0
@@ -151,6 +256,8 @@ inherit this default settings. The Project Properties dialog also has a new sett
 - **Description**:  When the new "Apply layer conditional styling colors" option is enabled in the layout attribute table settings, any conditional styling rules present in the layer will be applied inside the layout attribute table (foreground and background colors only, for now!). Refs [#25712](https://github.com/qgis/QGIS/issues/25712)
 
 ![](./imgs/33638.png)
+
+[come back](#changelog-312-bucurești)
 
 ##	Support for Oracle curves and surfaces
 - **author**:	troopa81
@@ -166,6 +273,8 @@ inherit this default settings. The Project Properties dialog also has a new sett
       * CurvePolygon(Z)
       * MultiSurface(Z)
 
+[come back](#changelog-312-bucurești)
+
 ##	New parameter type for map themes
 - **author**:	[nyalldawson](https://twitter.com/nyalldawson)
 - **merged**:	2020-01-05T10:50:06Z
@@ -175,6 +284,8 @@ inherit this default settings. The Project Properties dialog also has a new sett
 
 ![](./imgs/33608.png)
 
+[come back](#changelog-312-bucurești)
+
 ##	Rotate expression function (with followups)
 - **author**:	[nyalldawson](https://twitter.com/nyalldawson) [raymondnijssen](https://github.com/raymondnijssen)
 - **merged**:	2020-01-02T04:45:07Z
@@ -183,6 +294,8 @@ inherit this default settings. The Project Properties dialog also has a new sett
 - **Description**:  rotate() expression function [#33125](https://github.com/qgis/QGIS/pull/33125)
 
 ![](https://github.com/gbvitrano/HfcQGIS/blob/master/img/novita_312/Image03.png)
+
+[come back](#changelog-312-bucurești)
 
 ##	Add native affine transform algorithm for vectors
 - **author**:	[nyalldawson](https://twitter.com/nyalldawson)
@@ -201,6 +314,8 @@ inherit this default settings. The Project Properties dialog also has a new sett
 
 ![](./imgs/33552.png)
 
+[come back](#changelog-312-bucurești)
+
 ##	Allow dropping a map layer from the layer tree onto a projection selection widget
 - **author**:	[nyalldawson](https://twitter.com/nyalldawson)
 - **merged**:	2019-12-22T19:17:41Z
@@ -210,6 +325,8 @@ inherit this default settings. The Project Properties dialog also has a new sett
 
 ![](https://user-images.githubusercontent.com/1829991/71222288-b7070080-231b-11ea-89f4-af856dece4c3.gif)
 
+[come back](#changelog-312-bucurești)
+
 ##	Load 3D vector layer data in background + tiling
 - **author**:	[wonder-sk](https://github.com/wonder-sk)
 - **milestone**:	3.12.0
@@ -218,6 +335,8 @@ inherit this default settings. The Project Properties dialog also has a new sett
 - **PR**:	[33480](https://github.com/qgis/QGIS/pull/33480)
 - **Description**:  This adds support for background loading of data from vector layers into 3D map views. Until now, loading (and tessellation) would freeze the GUI completely - this could take many seconds depending on the complexity of input data.
 - **Sponsored by** QGIS.org grant.
+
+[come back](#changelog-312-bucurești)
 
 ##	Stored expressions
 - **author**:	[elpaso](https://twitter.com/elpaso66)
@@ -230,6 +349,8 @@ inherit this default settings. The Project Properties dialog also has a new sett
 
 ![](https://user-images.githubusercontent.com/142164/70983414-faae0000-20b8-11ea-9f25-14b338d4c680.gif)
 
+[come back](#changelog-312-bucurești)
+
 ##	List referenced layer values in Expression Builder
 - **author**:	signedav
 - **merged**:	2019-12-20T16:29:11Z
@@ -237,6 +358,8 @@ inherit this default settings. The Project Properties dialog also has a new sett
 - **Description**:  When a field is a RelationReference, ValueRelation and ValueMap, there is the possibility not only to show the values of the current layer but also the possible values in the referenced layer / configured possiblities. age is a ValueMap, species is a ValueRelation and island_id is a RelationReference
 
 ![](https://user-images.githubusercontent.com/28384354/70978774-ab63d180-20b0-11ea-901b-d51d44fa8fa4.gif)
+
+[come back](#changelog-312-bucurești)
 
 ##	Other average methods 3d mesh
 - **author**:	[PeterPetrik](https://github.com/PeterPetrik)
@@ -247,6 +370,8 @@ inherit this default settings. The Project Properties dialog also has a new sett
 - **Description**:   add all remaining method based on [qgis/QGIS-Enhancement-Proposals#158](https://github.com/qgis/QGIS-Enhancement-Proposals/issues/158), for methods description see <https://fvwiki.tuflow.com/index.php?title=Depth_Averaging_Results>
 
 ![](https://user-images.githubusercontent.com/804608/71175509-068bf480-2268-11ea-9d60-adad896912e2.png)
+
+[come back](#changelog-312-bucurești)
 
 ##	Fixes time reference for mesh layer #32186 #33399 #31933
 - **author**:	vcloarec
@@ -264,6 +389,8 @@ A push button is added to reload the reference time provided with dataset groups
 
 ![](https://user-images.githubusercontent.com/7416892/70955568-bb939680-2047-11ea-9857-8aba122e43dd.png)
 
+[come back](#changelog-312-bucurești)
+
 ##	Add expressions is_empty(geom)  is_empty_or_null(geom)
 - **author**:	[lbartoletti](https://twitter.com/lo_bartoletti)
 - **merged**:	2019-12-16T07:06:59Z
@@ -271,6 +398,8 @@ A push button is added to reload the reference time provided with dataset groups
 - **Description**:  Following my work on empty geometries, here is a new expression to catch them.
 
 ![](https://github.com/gbvitrano/HfcQGIS/blob/master/img/geometria/is_empty/is_empty1.png)
+
+[come back](#changelog-312-bucurești)
 
 ##	Support datasets with data defined on faces in mesh calculator
 - **author**:	[PeterPetrik](https://github.com/PeterPetrik)
@@ -282,6 +411,8 @@ A push button is added to reload the reference time provided with dataset groups
 
 ![](https://user-images.githubusercontent.com/804608/70247995-931fb880-177a-11ea-9b4d-83bfc4fa92ad.png)
 
+[come back](#changelog-312-bucurești)
+
 ##	Show the total pan distance and bearing in the status bar
 - **author**:	[nyalldawson](https://twitter.com/nyalldawson)
 - **merged**:	2019-12-05T18:50:19Z
@@ -289,6 +420,8 @@ A push button is added to reload the reference time provided with dataset groups
 - **Description**: ...during canvas pan operations. Allows users to know exactly how far (and in what direction) they've dragged the map.
 
 ![](./imgs/pan_bar_status.gif)
+
+[come back](#changelog-312-bucurești)
 
 ##	Add option to auto-rotate canvas to GPS bearing; show GPS bearing as a line over map
 - **author**:	[nyalldawson](https://twitter.com/nyalldawson)
@@ -299,6 +432,8 @@ A push button is added to reload the reference time provided with dataset groups
   * _**Add option to auto-rotate canvas to GPS bearing**_: When enabled, the map canvas will automatically rotate so that it's oriented in the same direction as the GPS bearing;
   * _**Show GPS bearing as a line over map**_: Allow showings a bearing line from the GPS location pointed in the GPS's direction. Allows users to view a "current path" directional line as they navigate using a GPS
 
+[come back](#changelog-312-bucurești)
+
 ##	Show html files in browser panel
 - **author**:	[nyalldawson](https://twitter.com/nyalldawson)
 - **merged**:	2019-12-06T04:39:10Z
@@ -306,6 +441,8 @@ A push button is added to reload the reference time provided with dataset groups
 - **Description**:  Allows .htm(l) files to be shown and opened from the browser panel. These are often used to document data files or mapping projects.
 
 ![](./imgs/33219.png)
+
+[come back](#changelog-312-bucurești)
 
 ##	New algorithm "Repair Shapefile"
 - **author**:	[nyalldawson](https://twitter.com/nyalldawson)
@@ -315,6 +452,8 @@ A push button is added to reload the reference time provided with dataset groups
 - **Description**:  Uses GDAL to repair shapefiles which have a broken or missing .SHX file.
 
 ![](./imgs/33218.png)
+
+[come back](#changelog-312-bucurești)
 
 ##	Static particle traces for rendering mesh vector dataset
 - **author**:	vcloarec
@@ -331,6 +470,8 @@ The user can choose in the mesh layer properties window :
 
 ![](https://user-images.githubusercontent.com/7416892/69893325-29b92900-12e6-11ea-98bf-7488d49d7eb8.png)
 
+[come back](#changelog-312-bucurești)
+
 ##	Stacked 3d mesh (part 1.)
 - **author**:	[PeterPetrik](https://github.com/PeterPetrik)
 - **milestone**:	3.12.0
@@ -341,6 +482,8 @@ The user can choose in the mesh layer properties window :
 
 ![](https://user-images.githubusercontent.com/804608/70130218-70a97480-1680-11ea-9071-f3a1e2400af1.png)
 
+[come back](#changelog-312-bucurești)
+
 ##	Show "Open Document..." action when right clicking certain
 - **author**:	[nyalldawson](https://twitter.com/nyalldawson)
 - **merged**:	2019-12-04T06:50:53Z
@@ -349,6 +492,8 @@ The user can choose in the mesh layer properties window :
 Works with PDF, ODS, XLS(X), CSV, TXT, PNG, JPEG, TIFF, SVG (other types will likely need more work, since they aren't currently shown in the browser)
 
 ![](https://user-images.githubusercontent.com/1829991/69840503-8a754100-12a7-11ea-9b5d-6aecdcab7829.gif)
+
+[come back](#changelog-312-bucurești)
 
 ##	Allow drag and drop of pictures onto layouts
 - **author**:	[nyalldawson](https://twitter.com/nyalldawson)
@@ -359,12 +504,16 @@ Works with PDF, ODS, XLS(X), CSV, TXT, PNG, JPEG, TIFF, SVG (other types will li
 
 ![](https://user-images.githubusercontent.com/1829991/69777105-7b7c8900-11ea-11ea-9f89-6fc09d98c986.gif)
 
+[come back](#changelog-312-bucurești)
+
 ##	Paint effect support for diagram renderer
 - **author**:	[nyalldawson](https://twitter.com/nyalldawson)
 - **merged**:	2019-11-24T20:20:44Z
 - **PR**:	[33044](https://github.com/qgis/QGIS/pull/33044)
 - **Description**:  Allows for diagrams to use paint effects, including drop shadows, outer glows, etc...
 - **Sponsored by** SLYR
+
+[come back](#changelog-312-bucurești)
 
 ##	New diagram type "stacked bars"
 - **author**:	[nyalldawson](https://twitter.com/nyalldawson)
@@ -375,6 +524,8 @@ Works with PDF, ODS, XLS(X), CSV, TXT, PNG, JPEG, TIFF, SVG (other types will li
 
 ![](https://user-images.githubusercontent.com/1829991/69490593-23860f80-0ed6-11ea-889b-bc0a9ba38851.png)
 
+[come back](#changelog-312-bucurești)
+
 ##	Diagrams - add option to show axis for histogram plots; many fixes
 - **author**:	[nyalldawson](https://twitter.com/nyalldawson)
 - **merged**:	2019-11-23T08:06:19Z
@@ -383,6 +534,8 @@ Works with PDF, ODS, XLS(X), CSV, TXT, PNG, JPEG, TIFF, SVG (other types will li
 - **Sponsored by** SLYR
 
 ![](https://user-images.githubusercontent.com/1829991/69471701-02e28a80-0dee-11ea-8699-c935d1dc4985.png)
+
+[come back](#changelog-312-bucurești)
 
 ##	Streamlines Renderer for vector dataset on mesh layer.
 - **author**:	vcloarec
@@ -394,6 +547,8 @@ Works with PDF, ODS, XLS(X), CSV, TXT, PNG, JPEG, TIFF, SVG (other types will li
 
 ![](https://user-images.githubusercontent.com/7416892/69353527-055dac80-0c55-11ea-9afd-2d0a38c3c8da.gif)
 
+[come back](#changelog-312-bucurești)
+
 ##	Add option to control pie diagram angular direction
 - **author**:	[nyalldawson](https://twitter.com/nyalldawson)
 - **merged**:	2019-11-21T23:01:51Z
@@ -402,6 +557,8 @@ Works with PDF, ODS, XLS(X), CSV, TXT, PNG, JPEG, TIFF, SVG (other types will li
 - **Sponsored by** SLYR
 
 ![](imgs/32986.png)
+
+[come back](#changelog-312-bucurești)
 
 ##	Add spacing option for vector layer bar chart diagrams
 - **author**:	[nyalldawson](https://twitter.com/nyalldawson)
@@ -412,6 +569,8 @@ Works with PDF, ODS, XLS(X), CSV, TXT, PNG, JPEG, TIFF, SVG (other types will li
 
 ![](./imgs/32984.png)
 
+[come back](#changelog-312-bucurești)
+
 ##	Allow to delete custom label position
 - **author**:	3nids
 - **merged**:	2019-11-20T10:46:22Z
@@ -421,6 +580,8 @@ Works with PDF, ODS, XLS(X), CSV, TXT, PNG, JPEG, TIFF, SVG (other types will li
 
 ![](./imgs/canc_label.gif)
 
+[come back](#changelog-312-bucurești)
+
 ##	Add search box to layout manager
 - **author**:	[nyalldawson](https://twitter.com/nyalldawson)
 - **milestone**:	3.12.0
@@ -429,6 +590,8 @@ Works with PDF, ODS, XLS(X), CSV, TXT, PNG, JPEG, TIFF, SVG (other types will li
 - **Description**:  Allows filtering the list of layouts in a project by name, handy when a project has many layouts..!
 
 ![](./imgs/32939.png)
+
+[come back](#changelog-312-bucurești)
 
 ##	is_valid expression
 - **author**:	pkinglinz
@@ -440,6 +603,8 @@ I have tested the function manually and confirmed the tests pass, however I can'
 
 ![](https://github.com/gbvitrano/HfcQGIS/blob/master/img/geometria/is_valid/is_valid1.png)
 
+[come back](#changelog-312-bucurești)
+
 ##	Processing raster calc: add missing btns and validate
 - **author**:	[elpaso](https://twitter.com/elpaso66)
 - **merged**:	2019-11-16T07:19:28Z
@@ -449,11 +614,15 @@ I have tested the function manually and confirmed the tests pass, however I can'
 
 ![](https://user-images.githubusercontent.com/142164/68952420-1bd0b780-07c0-11ea-88d1-2ad0a8b5591e.gif)
 
+[come back](#changelog-312-bucurești)
+
 ##	Make the DXF renderer ready for background threading and fix symbology
 - **author**:	[m-kuhn](https://twitter.com/_mkuhn)
 - **merged**:	2019-11-14T08:47:23Z
 - **PR**:	[32770](https://github.com/qgis/QGIS/pull/32770)
 - **Description**:  This puts the whole dxf export into one single rendering process and prefetches information related to this before starting to render. The immediate benefit is to fix symbology. The current code writes symbol blocks for symbol layers (e.g. for dashed lines), when the lines are actually rendered, they don't reference the block. This was caused by the fact that rendering was restarted for writing blocks and for writing entities. With the result that different clones of the symbol layers were used and therefore could not be matched. The advantage in the longer run is that we will be able to run dxf exports in the background (allow to cancel, processing algorithms, ...) because they no longer rely on the QgsVectorLayer objects but rather on feature source and other threading friendly facilities.
+
+[come back](#changelog-312-bucurești)
 
 ##	Add Fuzzy Logic raster algorithms
 - **author**:	root676
@@ -477,6 +646,8 @@ Output fuzzified layer showcasing location suitability for a certain kind of cro
 
 ![](https://user-images.githubusercontent.com/9716552/68341161-2ae0a700-00e8-11ea-8d27-9a3064ff9af7.png)
 
+[come back](#changelog-312-bucurești)
+
 ##	Server OAPIF simple transactions
 - **author**:	[elpaso](https://twitter.com/elpaso66)
 - **milestone**:	3.12.0
@@ -486,6 +657,8 @@ Output fuzzified layer showcasing location suitability for a certain kind of cro
 - **Description**:  Simple OAPIF server transactions : Preliminary specs:
 <https://github.com/opengeospatial/ogcapi-features/blob/master/extensions/transactions/TX_Notes.adoc>
 
+[come back](#changelog-312-bucurești)
+
 ##	Server OAPIF properties
 - **author**:	[elpaso](https://twitter.com/elpaso66)
 - **merged**:	2019-11-06T09:48:05Z
@@ -493,12 +666,16 @@ Output fuzzified layer showcasing location suitability for a certain kind of cro
 - **PR**:	[32655](https://github.com/qgis/QGIS/pull/32655)
 -  **Description**:  Makes it possible to specify a comma separate list of attributes to be returned by items call. This is apparently not in core specifications but most of sample implementations supports it and well, it's just useful. Also adds nl2br utility function for templates.
 
+[come back](#changelog-312-bucurești)
+
 ##	HAlign/VAlign support for TEXT
 - **author**:	[m-kuhn](https://twitter.com/_mkuhn)
 - **merged**:	2019-11-07T15:37:07Z
 - **tags**:	DXF/DWG;Feature
 - **PR**:	[32629](https://github.com/qgis/QGIS/pull/32629)
 - **Description**:  halign / valign support for dxf
+
+[come back](#changelog-312-bucurești)
 
 ##	Add save multiple styles action to style menu
 - **author**:	[elpaso](https://twitter.com/elpaso66)
@@ -509,6 +686,8 @@ Output fuzzified layer showcasing location suitability for a certain kind of cro
 
 ![](https://user-images.githubusercontent.com/142164/68129308-9c1e2f80-ff19-11e9-92d0-95d5dadb5eee.gif)
 
+[come back](#changelog-312-bucurești)
+
 ##	Add expression functions for converting to/from wkb
 - **author**:	[nyalldawson](https://twitter.com/nyalldawson)
 - **merged**:	2019-11-04T03:00:12Z
@@ -518,6 +697,8 @@ Since QGIS 3.6 we've had good support for binary blob values in expressions and 
 
 ![](https://github.com/gbvitrano/HfcQGIS/blob/master/img/geometria/geom_from_wkb/geom_from_wkb1.png)
 
+[come back](#changelog-312-bucurești)
+
 ##	Add - **merged**:_from_epoch (MSec from epoch) expression function
 - **author**:	rduivenvoorde
 - **merged**:	2019-11-22T10:09:38Z
@@ -525,6 +706,8 @@ Since QGIS 3.6 we've had good support for binary blob values in expressions and 
 - **Description**:  Adds a function to create a DateTime from a seconds since epoch timestamp, to be used in expresssions. As there is an 'epoch' function working in MilliSeconds (and the original Qt function also does MilliSeconds, I create it to use mSecs).
 
 ![](https://github.com/gbvitrano/HfcQGIS/blob/master/img/data_e_ora/datetime_from_epoch1.png)
+
+[come back](#changelog-312-bucurești)
 
 ##	Ignored credentials temporary cache
 - **author**:	[elpaso](https://twitter.com/elpaso66)
@@ -536,6 +719,8 @@ Since QGIS 3.6 we've had good support for binary blob values in expressions and 
 
 ![](https://user-images.githubusercontent.com/142164/67949543-2dbf3180-fbe8-11e9-9a94-70acca5f8154.png)
 
+[come back](#changelog-312-bucurești)
+
 ##	Create child feature with geometry from the relation editor
 - **author**:	troopa81
 - **merged**:	2019-12-04T13:46:33Z
@@ -543,6 +728,8 @@ Since QGIS 3.6 we've had good support for binary blob values in expressions and 
 - **Description**:  This PR allows to create a child feature by digitizing its geometry in the canvas directly from the relation editor widget.
 
 ![](https://user-images.githubusercontent.com/14358135/67881832-87205580-fb41-11e9-9d50-fbe348a2daf4.gif)
+
+[come back](#changelog-312-bucurești)
 
 ##	Value relation restore missing layers from DBs
 - **author**:	[elpaso](https://twitter.com/elpaso66)
@@ -553,6 +740,8 @@ Since QGIS 3.6 we've had good support for binary blob values in expressions and 
 - **Description**:  Checks for missing layers in value relation widget and loads them automatically (if possible), also warns the user if the layer could not be found.
 - **Sponsored by** ARPA Piemonte
 
+[come back](#changelog-312-bucurești)
+
 ##	Selection widget in feature selection dialog
 - **author**:	troopa81
 - **merged**:	2019-12-16T10:32:26Z
@@ -561,12 +750,16 @@ Since QGIS 3.6 we've had good support for binary blob values in expressions and 
 
 ![](https://user-images.githubusercontent.com/14358135/67744684-804ef100-fa22-11e9-94d6-4717bbf3cd87.gif)
 
+[come back](#changelog-312-bucurești)
+
 ##	add gdal_viewshed algorithm
 - **author**:	alexbruy
 - **merged**:	2019-11-06T03:40:35Z
 - **tags**:	Feature;Processing
 - **PR**:	[32463](https://github.com/qgis/QGIS/pull/32463)
 - **Description**:  Expose new `gdal_viewshed` tool via Processing toolbox. Note: this requires **GDAL >= 3.1**.
+
+[come back](#changelog-312-bucurești)
 
 ##	Add density-based point count for the random marker fill
 - **author**:	nirvn
@@ -577,6 +770,8 @@ Since QGIS 3.6 we've had good support for binary blob values in expressions and 
 
 ![](https://user-images.githubusercontent.com/1728657/67672096-c2881c00-f9a9-11e9-8394-d73505d05309.gif)
 
+[come back](#changelog-312-bucurești)
+
 ##	Server wfs3 timefilter dimensions
 - **author**:	[elpaso](https://twitter.com/elpaso66)
 - **milestone**:	3.12.0
@@ -586,11 +781,15 @@ Since QGIS 3.6 we've had good support for binary blob values in expressions and 
 - **Description**: Filters can be configured as Date or Time filters in WMS dimensions configuration (I need to work a bit on the GUI to make sure it is clear that Date and Time apply to OAPIF and WMS only accepts Time, but I need to check it).
 - **Sponsored by** OSGeo
 
+[come back](#changelog-312-bucurești)
+
 ##	Add OGC API - Features (OAPIF) provider
 - **author**:	[rouault](https://twitter.com/EvenRouault)
 - **merged**:	2019-10-25T20:48:00Z
 - **PR**:	[32262](https://github.com/qgis/QGIS/pull/32262)
 - **Description**: Implements what was mentionned in <https://lists.osgeo.org/pipermail/qgis-developer/2019-September/058649.html>
+
+[come back](#changelog-312-bucurești)
 
 ##	Random marker fill symbol layer type
 - **author**:	[nyalldawson](https://twitter.com/nyalldawson)
@@ -601,6 +800,8 @@ Since QGIS 3.6 we've had good support for binary blob values in expressions and 
 - **Sponsored by** SLYR
 
 ![](https://user-images.githubusercontent.com/1829991/66734145-51267480-eea5-11e9-9e0a-3bfeee15f976.png)
+
+[come back](#changelog-312-bucurești)
 
 ##	Export mesh contours & resampling
 - **author**:	[PeterPetrik](https://github.com/PeterPetrik)
@@ -613,6 +814,8 @@ Since QGIS 3.6 we've had good support for binary blob values in expressions and 
 ![](https://user-images.githubusercontent.com/804608/66637777-00e4b380-ec14-11e9-86be-ec4fc218434d.png)
 ![](https://user-images.githubusercontent.com/804608/66637777-00e4b380-ec14-11e9-86be-ec4fc218434d.png)
 
+[come back](#changelog-312-bucurești)
+
 ##	Feature update layer selection relation widgets
 - **author**:	troopa81
 - **milestone**:	3.12.0
@@ -622,6 +825,8 @@ Since QGIS 3.6 we've had good support for binary blob values in expressions and 
 This is problematic because you cannot use map selection if you want to choose child to create a relation with a given parent. This is what it looks like with the PR.
 
 ![](https://user-images.githubusercontent.com/14358135/65410406-90076400-ddea-11e9-8c3c-fb05c50b6e91.gif)
+
+[come back](#changelog-312-bucurești)
 
 ##	fix #29326 Adding playback function for mesh datasets
 - **author**:	MarcusUrban
@@ -633,6 +838,8 @@ This is problematic because you cannot use map selection if you want to choose c
 
 ![](https://user-images.githubusercontent.com/55395434/65317179-9bb11b80-db9b-11e9-99a0-9c1e72edb2fd.gif)
 
+[come back](#changelog-312-bucurești)
+
 ##	Add json support to WMS GetLegendGraphic
 - **author**:	elemoine
 - **milestone**:	3.12.0
@@ -642,6 +849,8 @@ This is problematic because you cannot use map selection if you want to choose c
 - **Description**:  This PR adds support for GetLegendGraphic responses encoded as JSON. It builds on previous work by @pblottiere, who added QgsLegendRenderer::exportLegendToJson for that exact purpose. For example a GetLegendGraphic request with FORMAT=image/png producing the image:
 
 ![](https://user-images.githubusercontent.com/76594/64876231-fbb13a80-d64e-11e9-83e5-120fb1bc0ea8.png)
+
+[come back](#changelog-312-bucurești)
 
 ##	Add option to set color for rendering nodata pixels in raster layers
 - **author**:	[nyalldawson](https://twitter.com/nyalldawson)
@@ -654,6 +863,8 @@ This is problematic because you cannot use map selection if you want to choose c
 
 ![](https://user-images.githubusercontent.com/1728657/64846100-f4c9fe00-d635-11e9-8acb-367ad2dd2915.png)
 
+[come back](#changelog-312-bucurești)
+
 ##	Hash expressions
 - **author**:	[lbartoletti](https://twitter.com/lo_bartoletti)
 - **merged**:	2019-10-25T22:32:27Z
@@ -663,12 +874,16 @@ This is problematic because you cannot use map selection if you want to choose c
 
 ![](https://github.com/gbvitrano/HfcQGIS/blob/master/img/conversioni/hash1.png)
 
+[come back](#changelog-312-bucurești)
+
 ##	Parallelize snap caching
 - **author**:	troopa81
 - **milestone**:	3.10.1
 - **merged**:	2019-10-31T08:31:21Z
 - **PR**:	[31648](https://github.com/qgis/QGIS/pull/31648)
 - **Description**:  The snapToCurrentLayer method doesn't prepare the index and expect to be executed synchronously. So the temporary point locator must be synchronous.
+
+[come back](#changelog-312-bucurești)
 
 ##	Add z distance
 - **author**:	ismailsunni
@@ -678,6 +893,8 @@ This is problematic because you cannot use map selection if you want to choose c
 - **Description**:  The contents: Adding Z-Distance to the 3D Measurement dialog (suggested by @timlinux ); Fixing not clearing the measurement table when restart using right-click
 
 [](https://user-images.githubusercontent.com/1421861/63779698-a9061d80-c8ef-11e9-9e77-e2a652958620.gif)
+
+[come back](#changelog-312-bucurești)
 
 ##	Selective masking
 - **author**:	mhugo
@@ -689,6 +906,8 @@ This is problematic because you cannot use map selection if you want to choose c
 
 ![](https://user-images.githubusercontent.com/1618556/62111873-d68c8680-b2b1-11e9-8cd4-19077f99a8ff.gif)
 
+[come back](#changelog-312-bucurești)
+
 ##	Bad Layer Handler Improvements
 - **author**:	roya0045
 - **milestone**:	3.12.0
@@ -699,9 +918,9 @@ This is problematic because you cannot use map selection if you want to choose c
 
 ![](https://user-images.githubusercontent.com/12854129/66336231-b0671080-e90a-11e9-9a53-8b1b5edd1579.gif)
 
-# Statistics
+[come back](#changelog-312-bucurești)
 
----
+# Statistics
 
 | tags | pr | count | percent |
 | --- | --- | --- | --- |
@@ -721,19 +940,21 @@ This is problematic because you cannot use map selection if you want to choose c
 | GUI/UX | [32628](https://github.com/qgis/QGIS/pull/32628) [32546](https://github.com/qgis/QGIS/pull/32546) | 2 | 2.82 |
 | DXF/DWG | [32629](https://github.com/qgis/QGIS/pull/32629) | 1 | 1.41 |
 
+[come back](#changelog-312-bucurești)
+
 # Authors
 
 | author | pr | count | percent |
 | --- | --- | --- | --- |
-| nyalldawson | [33832](https://github.com/qgis/QGIS/pull/33832);[33807](https://github.com/qgis/QGIS/pull/33807);[33780](https://github.com/qgis/QGIS/pull/33780);[33754](https://github.com/qgis/QGIS/pull/33754);[33734](https://github.com/qgis/QGIS/pull/33734);[33674](https://github.com/qgis/QGIS/pull/33674);[33657](https://github.com/qgis/QGIS/pull/33657);[33638](https://github.com/qgis/QGIS/pull/33638);[33608](https://github.com/qgis/QGIS/pull/33608);[33575](https://github.com/qgis/QGIS/pull/33575);[33552](https://github.com/qgis/QGIS/pull/33552);[33485](https://github.com/qgis/QGIS/pull/33485);[33241](https://github.com/qgis/QGIS/pull/33241);[33240](https://github.com/qgis/QGIS/pull/33240);[33219](https://github.com/qgis/QGIS/pull/33219);[33218](https://github.com/qgis/QGIS/pull/33218);[33142](https://github.com/qgis/QGIS/pull/33142);[33113](https://github.com/qgis/QGIS/pull/33113);[33044](https://github.com/qgis/QGIS/pull/33044);[33043](https://github.com/qgis/QGIS/pull/33043);[33029](https://github.com/qgis/QGIS/pull/33029);[32986](https://github.com/qgis/QGIS/pull/32986);[32984](https://github.com/qgis/QGIS/pull/32984);[32939](https://github.com/qgis/QGIS/pull/32939);[32561](https://github.com/qgis/QGIS/pull/32561);[32241](https://github.com/qgis/QGIS/pull/32241);[31728](https://github.com/qgis/QGIS/pull/31728) | 27 | 38.03 |
-| elpaso | [33921](https://github.com/qgis/QGIS/pull/33921);[33685](https://github.com/qgis/QGIS/pull/33685);[33437](https://github.com/qgis/QGIS/pull/33437);[32890](https://github.com/qgis/QGIS/pull/32890);[32694](https://github.com/qgis/QGIS/pull/32694);[32655](https://github.com/qgis/QGIS/pull/32655);[32628](https://github.com/qgis/QGIS/pull/32628);[32546](https://github.com/qgis/QGIS/pull/32546);[32487](https://github.com/qgis/QGIS/pull/32487);[32322](https://github.com/qgis/QGIS/pull/32322) | 10 | 14.08 |
-| PeterPetrik | [33679](https://github.com/qgis/QGIS/pull/33679);[33426](https://github.com/qgis/QGIS/pull/33426);[33248](https://github.com/qgis/QGIS/pull/33248);[33153](https://github.com/qgis/QGIS/pull/33153);[32201](https://github.com/qgis/QGIS/pull/32201) | 5 | 7.04 |
-| troopa81 | [33629](https://github.com/qgis/QGIS/pull/33629);[32528](https://github.com/qgis/QGIS/pull/32528);[32472](https://github.com/qgis/QGIS/pull/32472);[31951](https://github.com/qgis/QGIS/pull/31951);[31648](https://github.com/qgis/QGIS/pull/31648) | 5 | 7.04 |
-| vcloarec | [33410](https://github.com/qgis/QGIS/pull/33410);[33165](https://github.com/qgis/QGIS/pull/33165);[32996](https://github.com/qgis/QGIS/pull/32996) | 3 | 4.23 |
-| wonder-sk | [33855](https://github.com/qgis/QGIS/pull/33855);[33480](https://github.com/qgis/QGIS/pull/33480) | 2 | 2.82 |
-| signedav | [33688](https://github.com/qgis/QGIS/pull/33688);[33436](https://github.com/qgis/QGIS/pull/33436) | 2 | 2.82 |
-| lbartoletti | [33333](https://github.com/qgis/QGIS/pull/33333);[31726](https://github.com/qgis/QGIS/pull/31726) | 2 | 2.82 |
-| m-kuhn | [32770](https://github.com/qgis/QGIS/pull/32770);[32629](https://github.com/qgis/QGIS/pull/32629) | 2 | 2.82 |
+| nyalldawson | [33832](https://github.com/qgis/QGIS/pull/33832) [33807](https://github.com/qgis/QGIS/pull/33807) [33780](https://github.com/qgis/QGIS/pull/33780) [33754](https://github.com/qgis/QGIS/pull/33754) [33734](https://github.com/qgis/QGIS/pull/33734) [33674](https://github.com/qgis/QGIS/pull/33674) [33657](https://github.com/qgis/QGIS/pull/33657) [33638](https://github.com/qgis/QGIS/pull/33638) [33608](https://github.com/qgis/QGIS/pull/33608) [33575](https://github.com/qgis/QGIS/pull/33575) [33552](https://github.com/qgis/QGIS/pull/33552) [33485](https://github.com/qgis/QGIS/pull/33485) [33241](https://github.com/qgis/QGIS/pull/33241) [33240](https://github.com/qgis/QGIS/pull/33240) [33219](https://github.com/qgis/QGIS/pull/33219) [33218](https://github.com/qgis/QGIS/pull/33218) [33142](https://github.com/qgis/QGIS/pull/33142) [33113](https://github.com/qgis/QGIS/pull/33113) [33044](https://github.com/qgis/QGIS/pull/33044) [33043](https://github.com/qgis/QGIS/pull/33043) [33029](https://github.com/qgis/QGIS/pull/33029) [32986](https://github.com/qgis/QGIS/pull/32986) [32984](https://github.com/qgis/QGIS/pull/32984) [32939](https://github.com/qgis/QGIS/pull/32939) [32561](https://github.com/qgis/QGIS/pull/32561) [32241](https://github.com/qgis/QGIS/pull/32241) [31728](https://github.com/qgis/QGIS/pull/31728) | 27 | 38.03 |
+| elpaso | [33921](https://github.com/qgis/QGIS/pull/33921) [33685](https://github.com/qgis/QGIS/pull/33685) [33437](https://github.com/qgis/QGIS/pull/33437) [32890](https://github.com/qgis/QGIS/pull/32890) [32694](https://github.com/qgis/QGIS/pull/32694) [32655](https://github.com/qgis/QGIS/pull/32655) [32628](https://github.com/qgis/QGIS/pull/32628) [32546](https://github.com/qgis/QGIS/pull/32546) [32487](https://github.com/qgis/QGIS/pull/32487) [32322](https://github.com/qgis/QGIS/pull/32322) | 10 | 14.08 |
+| PeterPetrik | [33679](https://github.com/qgis/QGIS/pull/33679) [33426](https://github.com/qgis/QGIS/pull/33426) [33248](https://github.com/qgis/QGIS/pull/33248) [33153](https://github.com/qgis/QGIS/pull/33153) [32201](https://github.com/qgis/QGIS/pull/32201) | 5 | 7.04 |
+| troopa81 | [33629](https://github.com/qgis/QGIS/pull/33629) [32528](https://github.com/qgis/QGIS/pull/32528) [32472](https://github.com/qgis/QGIS/pull/32472) [31951](https://github.com/qgis/QGIS/pull/31951) [31648](https://github.com/qgis/QGIS/pull/31648) | 5 | 7.04 |
+| vcloarec | [33410](https://github.com/qgis/QGIS/pull/33410) [33165](https://github.com/qgis/QGIS/pull/33165) [32996](https://github.com/qgis/QGIS/pull/32996) | 3 | 4.23 |
+| wonder-sk | [33855](https://github.com/qgis/QGIS/pull/33855) [33480](https://github.com/qgis/QGIS/pull/33480) | 2 | 2.82 |
+| signedav | [33688](https://github.com/qgis/QGIS/pull/33688) [33436](https://github.com/qgis/QGIS/pull/33436) | 2 | 2.82 |
+| lbartoletti | [33333](https://github.com/qgis/QGIS/pull/33333) [31726](https://github.com/qgis/QGIS/pull/31726) | 2 | 2.82 |
+| m-kuhn | [32770](https://github.com/qgis/QGIS/pull/32770) [32629](https://github.com/qgis/QGIS/pull/32629) | 2 | 2.82 |
 | Samweli | [33651](https://github.com/qgis/QGIS/pull/33651) | 1 | 1.41 |
 | 3nids | [32942](https://github.com/qgis/QGIS/pull/32942) | 1 | 1.41 |
 | pkinglinz | [32900](https://github.com/qgis/QGIS/pull/32900) | 1 | 1.41 |
