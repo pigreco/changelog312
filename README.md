@@ -699,26 +699,54 @@ This is problematic because you cannot use map selection if you want to choose c
 
 ![](https://user-images.githubusercontent.com/12854129/66336231-b0671080-e90a-11e9-9a53-8b1b5edd1579.gif)
 
+# Statistics
+
 ---
 
-| tags | pr | count | percent | histogram |
-| --- | --- | --- | --- | --- |
-| Improvements | [33688](https://github.com/qgis/QGIS/pull/33688);[33674](https://github.com/qgis/QGIS/pull/33674);[33651](https://github.com/qgis/QGIS/pull/33651);[33436](https://github.com/qgis/QGIS/pull/33436);[33241](https://github.com/qgis/QGIS/pull/33241);[32770](https://github.com/qgis/QGIS/pull/32770);[32528](https://github.com/qgis/QGIS/pull/32528);[32487](https://github.com/qgis/QGIS/pull/32487);[32472](https://github.com/qgis/QGIS/pull/32472);[31951](https://github.com/qgis/QGIS/pull/31951);[31648](https://github.com/qgis/QGIS/pull/31648);[30297](https://github.com/qgis/QGIS/pull/30297) | 12 | 16.90 | ****** |
-| Processing | [33832](https://github.com/qgis/QGIS/pull/33832);[33807](https://github.com/qgis/QGIS/pull/33807);[33754](https://github.com/qgis/QGIS/pull/33754);[33608](https://github.com/qgis/QGIS/pull/33608);[33552](https://github.com/qgis/QGIS/pull/33552);[33485](https://github.com/qgis/QGIS/pull/33485);[33218](https://github.com/qgis/QGIS/pull/33218);[32890](https://github.com/qgis/QGIS/pull/32890);[32701](https://github.com/qgis/QGIS/pull/32701);[32463](https://github.com/qgis/QGIS/pull/32463) | 10 | 14.08 | ***** |
-| Expressions | [33575](https://github.com/qgis/QGIS/pull/33575);[33437](https://github.com/qgis/QGIS/pull/33437);[33333](https://github.com/qgis/QGIS/pull/33333);[32900](https://github.com/qgis/QGIS/pull/32900);[32561](https://github.com/qgis/QGIS/pull/32561);[32551](https://github.com/qgis/QGIS/pull/32551);[31726](https://github.com/qgis/QGIS/pull/31726) | 7 | 9.86 | *** |
-| Data Provider | [33855](https://github.com/qgis/QGIS/pull/33855);[33685](https://github.com/qgis/QGIS/pull/33685);[33629](https://github.com/qgis/QGIS/pull/33629);[33410](https://github.com/qgis/QGIS/pull/33410);[33153](https://github.com/qgis/QGIS/pull/33153);[32262](https://github.com/qgis/QGIS/pull/32262) | 6 | 8.45 | *** |
-| Mesh | [33426](https://github.com/qgis/QGIS/pull/33426);[33248](https://github.com/qgis/QGIS/pull/33248);[33165](https://github.com/qgis/QGIS/pull/33165);[32996](https://github.com/qgis/QGIS/pull/32996);[32201](https://github.com/qgis/QGIS/pull/32201);[31875](https://github.com/qgis/QGIS/pull/31875) | 6 | 8.45 | *** |
-| Server | [33921](https://github.com/qgis/QGIS/pull/33921);[32694](https://github.com/qgis/QGIS/pull/32694);[32655](https://github.com/qgis/QGIS/pull/32655);[32322](https://github.com/qgis/QGIS/pull/32322);[31747](https://github.com/qgis/QGIS/pull/31747) | 5 | 7.04 | ** |
-| Print Layouts | [33734](https://github.com/qgis/QGIS/pull/33734);[33657](https://github.com/qgis/QGIS/pull/33657);[33638](https://github.com/qgis/QGIS/pull/33638);[33113](https://github.com/qgis/QGIS/pull/33113);[32939](https://github.com/qgis/QGIS/pull/32939) | 5 | 7.04 | ** |
-| Diagrams | [33044](https://github.com/qgis/QGIS/pull/33044);[33043](https://github.com/qgis/QGIS/pull/33043);[33029](https://github.com/qgis/QGIS/pull/33029);[32986](https://github.com/qgis/QGIS/pull/32986);[32984](https://github.com/qgis/QGIS/pull/32984) | 5 | 7.04 | ** |
-| Browser Panel | [33679](https://github.com/qgis/QGIS/pull/33679);[33219](https://github.com/qgis/QGIS/pull/33219);[33142](https://github.com/qgis/QGIS/pull/33142) | 3 | 4.23 | * |
-| Symbology | [32456](https://github.com/qgis/QGIS/pull/32456);[32241](https://github.com/qgis/QGIS/pull/32241);[31728](https://github.com/qgis/QGIS/pull/31728) | 3 | 4.23 | * |
-| GPS | [33780](https://github.com/qgis/QGIS/pull/33780);[33240](https://github.com/qgis/QGIS/pull/33240) | 2 | 2.82 | * |
-| 3D | [33480](https://github.com/qgis/QGIS/pull/33480);[31451](https://github.com/qgis/QGIS/pull/31451) | 2 | 2.82 | * |
-| Labeling | [32942](https://github.com/qgis/QGIS/pull/32942);[30747](https://github.com/qgis/QGIS/pull/30747) | 2 | 2.82 | * |
-| GUI/UX | [32628](https://github.com/qgis/QGIS/pull/32628);[32546](https://github.com/qgis/QGIS/pull/32546) | 2 | 2.82 | * |
-| DXF/DWG | [32629](https://github.com/qgis/QGIS/pull/32629) | 1 | 1.41 |  |
+| tags | pr | count | percent |
+| --- | --- | --- | --- |
+| Improvements | [33688](https://github.com/qgis/QGIS/pull/33688) [33674](https://github.com/qgis/QGIS/pull/33674) [33651](https://github.com/qgis/QGIS/pull/33651) [33436](https://github.com/qgis/QGIS/pull/33436) [33241](https://github.com/qgis/QGIS/pull/33241) [32770](https://github.com/qgis/QGIS/pull/32770) [32528](https://github.com/qgis/QGIS/pull/32528) [32487](https://github.com/qgis/QGIS/pull/32487) [32472](https://github.com/qgis/QGIS/pull/32472) [31951](https://github.com/qgis/QGIS/pull/31951) [31648](https://github.com/qgis/QGIS/pull/31648) [30297](https://github.com/qgis/QGIS/pull/30297) | 12 | 16.90 |
+| Processing | [33832](https://github.com/qgis/QGIS/pull/33832) [33807](https://github.com/qgis/QGIS/pull/33807) [33754](https://github.com/qgis/QGIS/pull/33754) [33608](https://github.com/qgis/QGIS/pull/33608) [33552](https://github.com/qgis/QGIS/pull/33552) [33485](https://github.com/qgis/QGIS/pull/33485) [33218](https://github.com/qgis/QGIS/pull/33218) [32890](https://github.com/qgis/QGIS/pull/32890) [32701](https://github.com/qgis/QGIS/pull/32701) [32463](https://github.com/qgis/QGIS/pull/32463) | 10 | 14.08 |
+| Expressions | [33575](https://github.com/qgis/QGIS/pull/33575) [33437](https://github.com/qgis/QGIS/pull/33437) [33333](https://github.com/qgis/QGIS/pull/33333) [32900](https://github.com/qgis/QGIS/pull/32900) [32561](https://github.com/qgis/QGIS/pull/32561) [32551](https://github.com/qgis/QGIS/pull/32551) [31726](https://github.com/qgis/QGIS/pull/31726) | 7 | 9.86 |
+| Data Provider | [33855](https://github.com/qgis/QGIS/pull/33855) [33685](https://github.com/qgis/QGIS/pull/33685) [33629](https://github.com/qgis/QGIS/pull/33629) [33410](https://github.com/qgis/QGIS/pull/33410) [33153](https://github.com/qgis/QGIS/pull/33153) [32262](https://github.com/qgis/QGIS/pull/32262) | 6 | 8.45 |
+| Mesh | [33426](https://github.com/qgis/QGIS/pull/33426) [33248](https://github.com/qgis/QGIS/pull/33248) [33165](https://github.com/qgis/QGIS/pull/33165) [32996](https://github.com/qgis/QGIS/pull/32996) [32201](https://github.com/qgis/QGIS/pull/32201) [31875](https://github.com/qgis/QGIS/pull/31875) | 6 | 8.45 |
+| Server | [33921](https://github.com/qgis/QGIS/pull/33921) [32694](https://github.com/qgis/QGIS/pull/32694) [32655](https://github.com/qgis/QGIS/pull/32655) [32322](https://github.com/qgis/QGIS/pull/32322) [31747](https://github.com/qgis/QGIS/pull/31747) | 5 | 7.04 |
+| Print Layouts | [33734](https://github.com/qgis/QGIS/pull/33734) [33657](https://github.com/qgis/QGIS/pull/33657) [33638](https://github.com/qgis/QGIS/pull/33638) [33113](https://github.com/qgis/QGIS/pull/33113) [32939](https://github.com/qgis/QGIS/pull/32939) | 5 | 7.04 |
+| Diagrams | [33044](https://github.com/qgis/QGIS/pull/33044) [33043](https://github.com/qgis/QGIS/pull/33043) [33029](https://github.com/qgis/QGIS/pull/33029) [32986](https://github.com/qgis/QGIS/pull/32986) [32984](https://github.com/qgis/QGIS/pull/32984) | 5 | 7.04 |
+| Browser Panel | [33679](https://github.com/qgis/QGIS/pull/33679) [33219](https://github.com/qgis/QGIS/pull/33219) [33142](https://github.com/qgis/QGIS/pull/33142) | 3 | 4.23 |
+| Symbology | [32456](https://github.com/qgis/QGIS/pull/32456) [32241](https://github.com/qgis/QGIS/pull/32241) [31728](https://github.com/qgis/QGIS/pull/31728) | 3 | 4.23 |
+| GPS | [33780](https://github.com/qgis/QGIS/pull/33780) [33240](https://github.com/qgis/QGIS/pull/33240) | 2 | 2.82 |
+| 3D | [33480](https://github.com/qgis/QGIS/pull/33480) [31451](https://github.com/qgis/QGIS/pull/31451) | 2 | 2.82 |
+| Labeling | [32942](https://github.com/qgis/QGIS/pull/32942) [30747](https://github.com/qgis/QGIS/pull/30747) | 2 | 2.82 |
+| GUI/UX | [32628](https://github.com/qgis/QGIS/pull/32628) [32546](https://github.com/qgis/QGIS/pull/32546) | 2 | 2.82 |
+| DXF/DWG | [32629](https://github.com/qgis/QGIS/pull/32629) | 1 | 1.41 |
 
+# Authors
+
+| author | pr | count | percent |
+| --- | --- | --- | --- |
+| nyalldawson | [33832](https://github.com/qgis/QGIS/pull/33832);[33807](https://github.com/qgis/QGIS/pull/33807);[33780](https://github.com/qgis/QGIS/pull/33780);[33754](https://github.com/qgis/QGIS/pull/33754);[33734](https://github.com/qgis/QGIS/pull/33734);[33674](https://github.com/qgis/QGIS/pull/33674);[33657](https://github.com/qgis/QGIS/pull/33657);[33638](https://github.com/qgis/QGIS/pull/33638);[33608](https://github.com/qgis/QGIS/pull/33608);[33575](https://github.com/qgis/QGIS/pull/33575);[33552](https://github.com/qgis/QGIS/pull/33552);[33485](https://github.com/qgis/QGIS/pull/33485);[33241](https://github.com/qgis/QGIS/pull/33241);[33240](https://github.com/qgis/QGIS/pull/33240);[33219](https://github.com/qgis/QGIS/pull/33219);[33218](https://github.com/qgis/QGIS/pull/33218);[33142](https://github.com/qgis/QGIS/pull/33142);[33113](https://github.com/qgis/QGIS/pull/33113);[33044](https://github.com/qgis/QGIS/pull/33044);[33043](https://github.com/qgis/QGIS/pull/33043);[33029](https://github.com/qgis/QGIS/pull/33029);[32986](https://github.com/qgis/QGIS/pull/32986);[32984](https://github.com/qgis/QGIS/pull/32984);[32939](https://github.com/qgis/QGIS/pull/32939);[32561](https://github.com/qgis/QGIS/pull/32561);[32241](https://github.com/qgis/QGIS/pull/32241);[31728](https://github.com/qgis/QGIS/pull/31728) | 27 | 38.03 |
+| elpaso | [33921](https://github.com/qgis/QGIS/pull/33921);[33685](https://github.com/qgis/QGIS/pull/33685);[33437](https://github.com/qgis/QGIS/pull/33437);[32890](https://github.com/qgis/QGIS/pull/32890);[32694](https://github.com/qgis/QGIS/pull/32694);[32655](https://github.com/qgis/QGIS/pull/32655);[32628](https://github.com/qgis/QGIS/pull/32628);[32546](https://github.com/qgis/QGIS/pull/32546);[32487](https://github.com/qgis/QGIS/pull/32487);[32322](https://github.com/qgis/QGIS/pull/32322) | 10 | 14.08 |
+| PeterPetrik | [33679](https://github.com/qgis/QGIS/pull/33679);[33426](https://github.com/qgis/QGIS/pull/33426);[33248](https://github.com/qgis/QGIS/pull/33248);[33153](https://github.com/qgis/QGIS/pull/33153);[32201](https://github.com/qgis/QGIS/pull/32201) | 5 | 7.04 |
+| troopa81 | [33629](https://github.com/qgis/QGIS/pull/33629);[32528](https://github.com/qgis/QGIS/pull/32528);[32472](https://github.com/qgis/QGIS/pull/32472);[31951](https://github.com/qgis/QGIS/pull/31951);[31648](https://github.com/qgis/QGIS/pull/31648) | 5 | 7.04 |
+| vcloarec | [33410](https://github.com/qgis/QGIS/pull/33410);[33165](https://github.com/qgis/QGIS/pull/33165);[32996](https://github.com/qgis/QGIS/pull/32996) | 3 | 4.23 |
+| wonder-sk | [33855](https://github.com/qgis/QGIS/pull/33855);[33480](https://github.com/qgis/QGIS/pull/33480) | 2 | 2.82 |
+| signedav | [33688](https://github.com/qgis/QGIS/pull/33688);[33436](https://github.com/qgis/QGIS/pull/33436) | 2 | 2.82 |
+| lbartoletti | [33333](https://github.com/qgis/QGIS/pull/33333);[31726](https://github.com/qgis/QGIS/pull/31726) | 2 | 2.82 |
+| m-kuhn | [32770](https://github.com/qgis/QGIS/pull/32770);[32629](https://github.com/qgis/QGIS/pull/32629) | 2 | 2.82 |
+| Samweli | [33651](https://github.com/qgis/QGIS/pull/33651) | 1 | 1.41 |
+| 3nids | [32942](https://github.com/qgis/QGIS/pull/32942) | 1 | 1.41 |
+| pkinglinz | [32900](https://github.com/qgis/QGIS/pull/32900) | 1 | 1.41 |
+| root676 | [32701](https://github.com/qgis/QGIS/pull/32701) | 1 | 1.41 |
+| rduivenvoorde | [32551](https://github.com/qgis/QGIS/pull/32551) | 1 | 1.41 |
+| alexbruy | [32463](https://github.com/qgis/QGIS/pull/32463) | 1 | 1.41 |
+| nirvn | [32456](https://github.com/qgis/QGIS/pull/32456) | 1 | 1.41 |
+| rouault | [32262](https://github.com/qgis/QGIS/pull/32262) | 1 | 1.41 |
+| MarcusUrban | [31875](https://github.com/qgis/QGIS/pull/31875) | 1 | 1.41 |
+| elemoine | [31747](https://github.com/qgis/QGIS/pull/31747) | 1 | 1.41 |
+| ismailsunni | [31451](https://github.com/qgis/QGIS/pull/31451) | 1 | 1.41 |
+| mhugo | [30747](https://github.com/qgis/QGIS/pull/30747) | 1 | 1.41 |
+| roya0045 | [30297](https://github.com/qgis/QGIS/pull/30297) | 1 | 1.41 |
 ---
 
 # come è stato realizzato
