@@ -892,7 +892,7 @@ This is problematic because you cannot use map selection if you want to choose c
 - **PR**:	[31451](https://github.com/qgis/QGIS/pull/31451)
 - **Description**:  The contents: Adding Z-Distance to the 3D Measurement dialog (suggested by @timlinux ); Fixing not clearing the measurement table when restart using right-click
 
-[](https://user-images.githubusercontent.com/1421861/63779698-a9061d80-c8ef-11e9-9e77-e2a652958620.gif)
+![](https://user-images.githubusercontent.com/1421861/63779698-a9061d80-c8ef-11e9-9e77-e2a652958620.gif)
 
 [↑ come back ↑](#changelog-312-bucurești)
 
